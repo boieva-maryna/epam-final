@@ -5,8 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Start</title>
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-    <h1>Hi there!!!^)</h1>
+    <header class="header">
+        <a class="header__logo" href="start.html" title="start page"></a>
+            <a href="#" title="Sign up with email" class="link header__signup">Email sign up</a>
+            <a href="shopping-bag.html" title="Shopping Bag" class="link header__bag">
+                <img class="icon" src="img/ico_bag.svg" alt="bag icon">
+                Bag <span id="bagSum"></span> (<span id="bagNumber">0</span>)
+            </a>
+        <nav class="header__menu header__menu--dropdown">
+            <a href="#">Women</a>
+            <a href="#">Men</a>
+            <a href="#">Handbags</a>
+            <a href="#">Accessories</a>
+            <a href="#">Sale</a>
+            <a href="#">New Arrivals</a>
+            <a href="#">Clearance</a>
+            <a href="#">Store Locator</a>
+            <label class="header__search" for="search">
+                <input type="text" id="search" placeholder="Style name">
+                <img class="icon" src="img/ico_search.svg" alt="search icon">
+            </label>
+        </nav>
+    </header>
+    <script>
+        var search=document.querySelector('[for="search"]');
+        var input=document.getElementById('search');
+        search.onclick=function(e){
+            search.classList.add('header__search--active');
+        }
+        input.onblur=function(){
+            search.classList.remove('header__search--active');
+        }
+    </script>
 </body>
 </html>
