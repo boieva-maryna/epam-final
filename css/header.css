@@ -61,6 +61,7 @@
 .header__search input{
     padding-left: 5px;
     border: none;
+    font-size: 1rem;
 }
 .header__search{
     position: absolute;
@@ -71,6 +72,10 @@
     bottom: 13px;
     display: flex;
     display: -ms-flexbox;
+}
+.header__search input:focus{
+    outline: 0;
+    border: 0;
 }
 @media (max-width:767px){
     .header__logo{
@@ -97,10 +102,6 @@
     .header__search input{
         width: 100%;
     }
-}
-.header__search input:focus, input:active{
-    outline: 0;
-    border: 0;
 }
 @media (max-width:375px){
     html{
