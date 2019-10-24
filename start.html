@@ -13,12 +13,15 @@
 <body>
     <header class="header">
         <a class="header__logo" href="start.html" title="start page"></a>
-            <a href="#" title="Sign up with email" class="link header__signup">Email sign up</a>
-            <a href="shopping-bag.html" title="Shopping Bag" class="link header__bag">
-                <img class="icon" src="img/ico_bag.svg" alt="bag icon">
-                Bag <span id="bagSum"></span> (<span id="bagNumber">0</span>)
-            </a>
-        <nav class="header__menu header__menu--dropdown">
+        <a href="#" title="Sign up with email" class="link header__signup">Email sign up</a>
+        <a href="shopping-bag.html" title="Shopping Bag" class="link header__bag">
+            <img class="icon" src="img/ico_bag.svg" alt="bag icon">
+            Bag <span id="bagSum"></span> (<span id="bagNumber">0</span>)
+        </a>
+        <a href="#" class="icon header__dropdown" id="drop">
+            <span class="icon  dropdown__icon"></span>
+        </a>
+        <nav class="header__menu">
             <a href="#">Women</a>
             <a href="#">Men</a>
             <a href="#">Handbags</a>
@@ -36,11 +39,18 @@
     <script>
         var search=document.querySelector('[for="search"]');
         var input=document.getElementById('search');
+        var menu=document.querySelector('.header__menu');
+        var drop=document.getElementById('drop');
         search.onclick=function(e){
             search.classList.add('header__search--active');
         }
         input.onblur=function(){
             search.classList.remove('header__search--active');
+        }
+        drop.onclick=function(e){
+            e.preventDefault();
+            menu.classList.toggle('header__menu--drop');
+            drop.children[0].classList.toggle('dropdown__icon--close');
         }
     </script>
 </body>
