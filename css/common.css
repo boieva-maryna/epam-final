@@ -1,6 +1,9 @@
 html{
     font-size: 13px;
 }
+body>header,main,footer{
+    min-width: 375px;
+}
 a{
     text-decoration: none;
     color: black;
@@ -10,13 +13,13 @@ a{
     font-weight: 400;
     font-size: 1rem;
 }
-.header{
+.heading{
     font-family: 'Open Sans',sans-serif;
     font-weight: 700;
     margin: 0;
     padding: 0;
 }
-.small-header{
+.small-heading{
     font-family: 'Roboto',sans-serif;
     font-weight: 700;
 }
