@@ -117,8 +117,9 @@
     }
     .header__menu{
         position: fixed;
-        top:70px;
-        z-index: 1;
+        top:75px;
+        left: 0;
+        z-index: 2;
         height: 87vh;
         -ms-flex-direction: column;
         flex-direction: column;
@@ -128,9 +129,11 @@
         transition:opacity 400ms linear,visibility 0s linear 400ms;
     }
     .header__menu--drop{
+        width: 100%;
+        padding-left: 5%;
         visibility: visible;
         opacity: 1;
-        transition:opacity 400ms linear, visibility 0s linear
+        transition:opacity 400ms linear, visibility 0s linear;
     }
     .header__search{
         position: relative;
