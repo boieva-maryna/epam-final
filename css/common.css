@@ -10,6 +10,20 @@ a{
     font-weight: 400;
     font-size: 1rem;
 }
+.header{
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+.small-header{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+}
+.cursive{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
 a:hover{
     color: #fc4e52;
 }
