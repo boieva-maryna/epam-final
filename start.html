@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/start.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header wrp">
         <a class="header__logo" href="start.html" title="start page"></a>
         <a href="#" title="Sign up with email" class="link header__signup">Email sign up</a>
         <a href="shopping-bag.html" title="Shopping Bag" class="link header__bag">
@@ -38,32 +38,72 @@
         </nav>
     </header>
     <main>
-        <section class="promo">
+        <section class="promo wrp--big">
             <div class="promo__images">
-                <a href="item.html" class="promo__article">
-                    <article>
+                    <article class="promo__article">
                         <header>
-                            <h3 class="heading">Nike Red</h3>
+                            <a href="item.html"><h3 class="heading">Nike Red</h3></a>
                         </header>
                         <img src="img/Nike Red.jpg" alt="Nike Red">
                     </article>
-                </a>
-                <a href="catalog.html" class="promo__article">
-                    <article>
+                    <article class="promo__article">
                         <header>
-                            <h3 class="heading">Caps & Hats</h3>
+                            <a href="catalog.html"><h3 class="heading">Caps & Hats</h3></a>
                             <p class="cursive">Sale -50%</p>
                         </header>
                         <img src="img/Caps and Hats.jpg" alt="Caps and Hats">
                     </article>
-                </a>
             </div>
         </section>
-        <section class="offer">
-            <header>
-                <h2 class="heading"></h2>
-                <p class="cursive"></p>
-            </header>
+        <section class="offer__section">
+            <div class="wrp">
+                <header class="offer__header">
+                    <h2 class="heading">Best offer</h2>
+                    <p class="cursive">This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2018</p>
+                </header>
+                <div class="offer" id="offer">
+                    <div class="slider">
+                        <a href="#" class="up"><img src="img/ico_up.svg" alt="up"></a>
+                            <article class="product">
+                                <figure class="product__img">
+                                    <img src="img/Only Skinny Jeans.jpg">
+                                </figure>
+                                <h4 class="small-heading">Only Skinny Jeans</h4>
+                                <h5 class="price">£65.50</h5>
+                            </article>
+                            <article class="product">
+                                    <figure class="product__img">
+                                        <img src="img/Only Skinny Jeans.jpg">
+                                    </figure>
+                                    <h4 class="small-heading">Only Skinny Jeans</h4>
+                                    <h5 class="price">£65.50</h5>
+                            </article>
+                        <a href="#" class="down"><img src="img/ico_up.svg" style="transform: rotate(180deg);" alt="down"></a>
+                    </div>
+                    <div class="slider">
+                            <a href="#" class="up"><img src="img/ico_up.svg" alt="up"></a>
+                                <article class="product">
+                                    <figure class="product__img">
+                                        <img src="img/Levi’s Jeans for women.jpg">
+                                    </figure>
+                                    <h4 class="small-heading">Only Skinny Jeans</h4>
+                                    <h5 class="price">£95.50</h5>
+                                </article>
+                                <article class="product">
+                                        <figure class="product__img">
+                                            <img src="img/Levi’s Jeans for women.jpg">
+                                        </figure>
+                                        <h4 class="small-heading">Only Skinny Jeans</h4>
+                                        <h5 class="price">£65.50</h5>
+                                </article>
+                            <a href="#" class="down"><img src="img/ico_up.svg" style="transform: rotate(180deg);" alt="down"></a>
+                    </div>
+                    <div id="result">
+                        <p id="oldPrice" class="price">£161.00</p>
+                        <p id="newPrice" class="small-heading">£146.00</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <script src="data/catalog.js"></script>
