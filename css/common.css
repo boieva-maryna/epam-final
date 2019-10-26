@@ -21,7 +21,6 @@ a{
 .heading{
     font-family: 'Open Sans',sans-serif;
     font-weight: 700;
-    margin: 0;
     padding: 0;
     text-align: center;
 }
@@ -36,6 +35,7 @@ a{
     text-align: center;
 }
 .cursive{
+    font-size: 16px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     text-align: center;
@@ -65,9 +65,24 @@ a:active{
 .product__title,.product__price{
     font-size: 1.1rem;
 }
+.big-button{
+    font-size: 24px;
+    display: block;
+    width: 50%;
+    height: 77px;
+    line-height: 77px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #a8a8a8;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
 @media (max-width:767px){
     .product__title,.product__price{
         font-size: 1rem;
     }
-
+    .big-button{
+        font-size: 20px;
+    }
 }

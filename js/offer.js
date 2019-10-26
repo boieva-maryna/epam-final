@@ -12,16 +12,16 @@ createSlides(left,slider_wrp[0],0);
 createSlides(right,slider_wrp[1],1);
 countPrice();
 sliders[0].addEventListener('click',function(e){
-    e.preventDefault();
     if(e.target.className=="up"||e.target.className=="down"){
+        e.preventDefault();
         clickSlide(e,slider_wrp[0],0);
     }
     countPrice();
 },false)
 
 sliders[1].addEventListener('click',function(e){
-    e.preventDefault();
     if(e.target.className=="up"||e.target.className=="down"){
+        e.preventDefault();
         clickSlide(e,slider_wrp[1],1);
     }
     countPrice();
@@ -33,11 +33,11 @@ function createSlides(arr,parent,num){
         slide.setAttribute('data-price',arr[i].price);
         slide.setAttribute('data-slider',num);
         slide.className="product";
-        slide.innerHTML='<figure class="product__img">\
+        slide.innerHTML='<a href="item.html"><figure class="product__img">\
                 <img src='+arr[i].thumbnail+'>\
             </figure>\
             <h4 class="small-heading product__title">'+arr[i].title+'</h4>\
-            <h5 class="price product__price">£'+ arr[i].price+'</h5>';
+            <h5 class="price product__price">£'+ arr[i].price+'</h5></a>';
         if(i!=0) slide.style.display="none"; 
         else slide.setAttribute('data-active',true);
         parent.appendChild(slide);
