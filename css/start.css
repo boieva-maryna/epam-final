@@ -128,6 +128,7 @@
 .slider .product:first-of-type{
     display: block;
 }
+
 @media (max-width:767px){
     .promo__article:nth-child(2){
         display: none;
@@ -181,6 +182,12 @@
         bottom: 0.4em;
         right: 1em;
         left: 0;
+    }
+    .offer__header h2{
+        font-size: 2rem;
+    }
+    .offer__header p{
+        font-size: 16px;
     }
 }
 @media (min-width:768px) and (max-width:1023px){

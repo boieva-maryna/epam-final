@@ -8,6 +8,11 @@ a{
     text-decoration: none;
     color: black;
 }
+.icon{
+    height:12px;
+    width: 12px;
+    border: none;
+}
 .link{
     font-family: 'Roboto',sans-serif;
     font-weight: 400;
@@ -57,8 +62,12 @@ a:active{
     margin: 0;
     margin-bottom: 10%;
 }
+.product__title,.product__price{
+    font-size: 1.1rem;
+}
 @media (max-width:767px){
-    .product{
+    .product__title,.product__price{
         font-size: 1rem;
     }
+
 }

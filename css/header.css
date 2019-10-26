@@ -24,11 +24,6 @@
 .header__signup, .header__bag{
     display: block;
 }
-.icon{
-    height:12px;
-    width: 12px;
-    border: none;
-}
 .header__bag .icon{
     margin-right:15px;
 }
@@ -90,8 +85,9 @@
     border-left: 1px solid #a8a8a8;
 }
 .header__dropdown .icon{
-    margin-top: 29px;
-    margin-left: 23px;
+    transform: translateX(150%);
+    -ms-transform: translateX(150%);
+    margin-top: 23px;
 }
 .dropdown__icon{
     display: block;
