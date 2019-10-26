@@ -49,9 +49,6 @@ a:active{
 .wrp{
     padding: 0 5%;
 }
-.product, .product .price{
-    font-size: 1.1rem;
-}
 .product__img img{
     display: block;
     margin: 0 auto;
@@ -77,11 +74,22 @@ a:active{
     font-family: 'Open Sans',sans-serif;
     font-weight: 700;
     text-align: center;
-    z-index: 1;
-    position: relative;
+    z-index: 1;/* при наложении ячеек сетки кнопка не нажималась*/
+    position: relative;/*в ie без для static не работает z-index*/
 }
 .big-button:hover{
     border-color: #fc4e52;
+}
+.new-label{
+    color: white;
+    font-family:'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    background-color: #fc4e52;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top:3rem;
+    left: 0;
 }
 @media (max-width:767px){
     .product__title,.product__price{
