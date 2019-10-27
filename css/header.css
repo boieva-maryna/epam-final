@@ -102,6 +102,7 @@
 @media (max-width:767px){
     .header{
         -ms-grid-rows: max-content;
+        position: static;
     }
     .header__logo{
         width: 28px;
@@ -112,12 +113,12 @@
         display: none;
     }
     .header__menu{
-        position: fixed;
+        position: absolute;
         top:75px;
         left: 0;
         z-index: 2;
-        height: 87vh;
-        width: 100%;
+        height: calc(87vh - 75px);
+        width: 100vw;
         padding-left: 5%;
         -ms-flex-direction: column;
         flex-direction: column;
