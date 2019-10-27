@@ -2,6 +2,9 @@
     margin: 0 auto;
     position: relative;
 }
+main{
+    flex-grow: 0;
+}
 main section:after{
     content: "";
     display: block;
