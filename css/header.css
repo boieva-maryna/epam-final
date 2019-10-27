@@ -82,7 +82,7 @@
     background-color: white;
     height: 100%;
     width: 35px;
-    border-left: 1px solid #a8a8a8;
+    border-left: 1px solid #e5e5e5;
 }
 .header__dropdown .icon{
     transform: translateX(150%);

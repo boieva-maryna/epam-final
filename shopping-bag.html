@@ -5,8 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shopping-bag</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-    
+        <header class="header wrp">
+                <a class="header__logo" href="start.html" title="start page"></a>
+                <a href="#" title="Sign up with email" class="link header__signup">Email sign up</a>
+                <a href="shopping-bag.html" title="Shopping Bag" class="link header__bag">
+                    <img class="icon" src="img/ico_bag.svg" alt="bag icon">
+                    Bag <span id="bagSum"></span> (<span id="bagNumber">0</span>)
+                </a>
+                <a href="#" class="icon header__dropdown" id="drop">
+                    <span class="icon  dropdown__icon"></span>
+                </a>
+                <nav class="header__menu">
+                    <a href="#">Women</a>
+                    <a href="#">Men</a>
+                    <a href="#">Handbags</a>
+                    <a href="#">Accessories</a>
+                    <a href="#">Sale</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Clearance</a>
+                    <a href="#">Store Locator</a>
+                    <label class="header__search" for="search">
+                        <input type="text" id="search" placeholder="Style name">
+                        <img class="icon" src="img/ico_search.svg" alt="search icon">
+                    </label>
+                </nav>
+            </header>
+            <main></main>
+            <footer>
+                <div class="footer__wrp">
+                    <section class="footer__left">
+                        <header><h3 class="heading">Quick Links</h3></header>
+                        <nav>
+                            <a class="link" href="#">Store locator</a>
+                            <a class="link" href="#">Gift cards</a>
+                            <a class="link" href="#">Size guide</a>
+                            <a class="link" href="#">About us</a>
+                            <a class="link" href="#">Support</a>
+                        </nav>
+                    </section>
+                    <section class="footer__right">
+                        <header><h3 class="heading">Custumer care</h3></header>
+                        <nav>
+                            <a class="link" href="#">Custumer service</a>
+                            <a class="link" href="#">Track my order</a>
+                            <a class="link" href="#">Return policy</a>
+                            <a class="link" href="#">Shipping & delivery</a>
+                            <a class="link" href="#">Contact us</a>
+                            <a class="link" href="#">Careers</a>
+                        </nav>
+                    </section>
+                    <section class="footer__questions">
+                        <h3 class="heading">Questions</h3>
+                        <p class="link">
+                            <img class="icon" src="img/ico_twi.svg">
+                            Tweet us
+                            <a class="small-heading" href="#">@template</a>
+                        </p>
+                    </section>
+                    <section class="footer__order">
+                        <h3 class="heading">Order by phone</h3>
+                        <p class="link">
+                            <a href="tel:8-800-409-47-12">8-800-409-47-12</a>
+                        </p>
+                    </section>
+                    <p class="footer__delivery cursive">We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+                    <nav class="footer__soc">
+                        <a href="#"><img class="icon" src="img/ico_fb.svg"></a>
+                        <a href="#"><img class="icon" src="img/ico_twi2.svg"></a>
+                    </nav>
+                    <div class="footer__copyright">
+                        <p class="small-heading">
+                            © 2010–2015, The Template Group inc.
+                        </p>
+                        <h3 class="heading">Share <span class="price">1 437</span></h3>
+                    </div>
+                    <nav class="footer__sitemap">
+                        <a class="small-heading" href="#">Legal notice</a>
+                        <a class="small-heading" href="#">Privacy policy</a>
+                        <a class="small-heading" href="#">Site map</a>
+                    </nav>
+                </div>
+            </footer>
+    <script src="data/catalog.js"></script>
+    <script src="data/best-offer.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>
