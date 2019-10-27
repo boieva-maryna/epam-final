@@ -91,6 +91,7 @@
 }
 .dropdown__icon{
     display: block;
+    width: 12px;
     background-position: left;
     background-size: cover;
     background: url('../img/ico_menu.svg');

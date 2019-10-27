@@ -10,7 +10,6 @@ a{
 }
 .icon{
     height:12px;
-    width: 12px;
     border: none;
 }
 .link{
@@ -31,7 +30,7 @@ a{
 }
 .price{
     font-family: 'Roboto',sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
 }
 .cursive{
@@ -44,7 +43,7 @@ a:hover{
     color: #fc4e52;
 }
 a:active{
-    color:#a8a8a8;
+    color:#e5e5e5;
 }
 .wrp{
     padding: 0 5%;
@@ -65,12 +64,11 @@ a:active{
 .big-button{
     font-size: 24px;
     display: block;
-    width: 50%;
     height: 77px;
+    width: 100%;
     line-height: 77px;
-    margin: 0 auto;
     background-color: white;
-    border: 1px solid #a8a8a8;
+    border: 1px solid #e5e5e5;
     font-family: 'Open Sans',sans-serif;
     font-weight: 700;
     text-align: center;
@@ -96,6 +94,17 @@ a:active{
         font-size: 1rem;
     }
     .big-button{
+        width: 220px;
         font-size: 20px;
+    }
+}
+@media (min-width:768px) and (max-width:1023px){
+    .big-button{
+        width: 300px;
+    }
+}
+@media (min-width:1024px){
+    .big-button{
+        max-width: 340px;
     }
 }

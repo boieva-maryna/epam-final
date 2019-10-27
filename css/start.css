@@ -2,12 +2,12 @@
     margin: 0 auto;
     position: relative;
 }
-.promo::before, section:after{
+.promo::before, main section:after{
     content: "";
     display: block;
     width: 100%;
     height: 1px;
-    background-color: #a8a8a8;
+    background-color: #e5e5e5;
 }
 .promo__images{
     width: 100%;
@@ -29,12 +29,15 @@
     z-index: 1;
 }
 .promo__article:nth-child(2){
-    border-left: 1px solid #a8a8a8;
+    border-left: 1px solid #e5e5e5;
 }
 .promo__images img{
     display: block;
     width: 100%;
     height: 100%;
+}
+.promo p{
+    color: #757575;
 }
 .up,.down{
     display: block;
@@ -53,7 +56,7 @@
     margin-bottom: 40px;
 }
 #oldPrice{
-    color: #a8a8a8;
+    color: #757575;
     position: relative;
     margin: 0;
 }
@@ -140,7 +143,9 @@
 }
 .big-button{
     align-self: center;
+    justify-self: center;
     -ms-grid-row-align: center;
+    -ms-grid-column-align: center;
 }
 .offer__section__wrp{
     display: grid;
@@ -150,9 +155,9 @@
     display: grid;
     display: -ms-grid;
     grid-template-rows:0.5fr 1fr 0.5fr;
-    grid-template-columns: 1fr max-content 1fr;
+    grid-template-columns: 1fr;
     -ms-grid-rows: 0.5fr 1fr 0.5fr;
-    -ms-grid-columns: 1fr max-content 1fr;
+    -ms-grid-columns: 1fr;
 }
 .arrival{
     display: grid;
@@ -160,23 +165,15 @@
     -ms-grid-rows: 1fr;
     grid-row: 2;
     -ms-grid-row: 2;
-    grid-column: 1/4;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
 }
 .arrival__header{
     grid-row: 1;
     -ms-grid-row: 1;
-    grid-column: 2;
-    -ms-grid-column: 2;
     padding: 10% 0;
 }
 .arrival__section__wrp .big-button{
     grid-row: 3;
-    -ms-grid-column: 2;
-    grid-column: 2;
     -ms-grid-row: 3;
-    width: 100%;
 }
 .arrival .product{
     margin-left: 1.5em;
@@ -206,8 +203,8 @@
         font-size: 2rem;
     }
     .offer__section__wrp{
-        grid-template-rows: 2.2fr max-content 1.6fr;
-        -ms-grid-rows: 3.3fr max-content 3fr;
+        grid-template-rows: 0.5fr 1fr 0.5fr;
+        -ms-grid-rows: 0.5fr 1fr 0.5fr;
     }
     .offer{
         grid-template-columns: 1fr 1fr;
@@ -270,6 +267,9 @@
     }
     .arrival .product:nth-child(1){
         -ms-grid-column: 1;
+    }
+    footer::after{
+        bottom: 65px;
     }
 }
 @media (min-width:768px) and (max-width:1023px){
@@ -389,6 +389,6 @@
     }
     .promo::before, section::after{
         background-color: white;
-        background-image: linear-gradient(to left, #ffffff 0.5%, #a8a8a8 50%, #ffffff 99.5%);
+        background-image: linear-gradient(to left, #ffffff 0.5%, #e5e5e5 50%, #ffffff 99.5%);
     }
 }
