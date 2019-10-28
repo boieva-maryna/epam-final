@@ -73,6 +73,7 @@ a:active{
     display: block;
     margin: 0 auto;
     width: auto;
+    max-width: 100%;
 }
 .product__img{
     margin: 0;
