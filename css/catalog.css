@@ -1,0 +1,13 @@
+.filter::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+}
+@media (min-width:1300px){
+    .filter::after{
+        background-color: white;
+        background-image: linear-gradient(to left, #ffffff 0.5%, #e5e5e5 50%, #ffffff 99.5%);
+    }
+}

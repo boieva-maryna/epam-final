@@ -50,21 +50,21 @@ function clickSlide(e,slider,num){
     if(e.target.className=="up"){
         if(curr==slider.firstElementChild){
             slider.lastElementChild.setAttribute('data-active',true);
-            slider.lastElementChild.style.display="block";
+            slider.lastElementChild.style.display="inline-block";
         }
         else {
             curr.previousElementSibling.setAttribute('data-active',true);
-            curr.previousElementSibling.style.display="block";
+            curr.previousElementSibling.style.display="inline-block";
         }
     }
     else {
         if(curr==slider.lastElementChild){
             slider.firstElementChild.setAttribute('data-active',true);
-            slider.firstElementChild.style.display="block";
+            slider.firstElementChild.style.display="inline-block";
         }
         else{
             curr.nextSibling.setAttribute('data-active',true);
-            curr.nextSibling.style.display="block";
+            curr.nextSibling.style.display="inline-block";
         }
     }
 }

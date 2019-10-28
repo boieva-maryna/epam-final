@@ -39,6 +39,7 @@ a{
     font-weight: 700;
     text-align: center;
 }
+
 .price{
     font-family: 'Roboto',sans-serif;
     font-weight: 400;
@@ -57,17 +58,28 @@ a:active{
     color:#e5e5e5;
 }
 .wrp{
+    box-sizing: border-box;
     padding: 0 5%;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.wrp--big{
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 .product__img img{
     display: block;
     margin: 0 auto;
     width: auto;
-    max-width: 100%;
 }
 .product__img{
     margin: 0;
     margin-bottom: 10%;
+}
+.product{
+    box-sizing: border-box;
 }
 .product__title,.product__price{
     font-size: 1.1rem;
@@ -112,6 +124,15 @@ footer::after{
     bottom: 80px;
 }
 @media (max-width:767px){
+    .small-heading{
+        font-size: 10px;
+    }
+    .link, .footer__questions .small-heading{
+        font-size: 12px;
+    }
+    .heading{
+        font-size: 14px;
+    }
     .product__title,.product__price{
         font-size: 1rem;
     }
@@ -125,17 +146,38 @@ footer::after{
 }
 @media (min-width:768px) and (max-width:1023px){
     .big-button{
-        width: 300px;
+        max-width: 300px;
+    }
+    .small-heading{
+        font-size: 12px;
+    }
+    .link, .footer__questions .small-heading{
+        font-size: 14px;
+    }
+    .heading{
+        font-size: 16px;
     }
 }
 @media (min-width:1024px){
     .big-button{
         max-width: 340px;
     }
+    .small-heading{
+        font-size: 12px;
+    }
+    .link, .footer__questions .small-heading{
+        font-size: 14px;
+    }
+    .heading{
+        font-size: 16px;
+    }
 }
 @media (min-width:1300px){
     main::before, footer::after, footer::before{
         background-color: white;
         background-image: linear-gradient(to left, #ffffff 0.5%, #e5e5e5 50%, #ffffff 99.5%);
+    }
+    .wrp{
+        padding: 0;
     }
 }
