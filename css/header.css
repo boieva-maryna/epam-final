@@ -114,12 +114,13 @@
     }
     .header__menu{
         position: absolute;
+        box-sizing: border-box;
         top:75px;
         left: 0;
         z-index: 2;
         height: calc(87vh - 75px);
         min-height: 235px;
-        width: 100vw;
+        width: 100%;
         padding-left: 5%;
         -ms-flex-direction: column;
         flex-direction: column;
