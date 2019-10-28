@@ -116,7 +116,7 @@ footer::after{
         font-size: 1rem;
     }
     .big-button{
-        width: 220px;
+        max-width: 220px;
         font-size: 20px;
     }
     footer::after{
