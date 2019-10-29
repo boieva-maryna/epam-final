@@ -5,9 +5,198 @@
     height: 1px;
     background-color: #e5e5e5;
 }
+.filter__icon{
+    display: block;
+    background-image: url('../img/ico_down.svg');
+    width: 6px;
+    height: 3px;
+    position: absolute;
+    left: 90%;
+}
+.filter__category{
+    display: flex;
+    display: flexbox;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    -ms-flex-pack: justify;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+}
+.filter__checked{
+    flex-basis: 100%;
+}
+.filter__checked, .filter__name{
+    text-align: left;
+    margin: 0.5em 0;
+    padding: 0 5%;
+}
+.filter__options{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: left;
+    display: none;
+}
+.filter__options ul{
+    padding: 0;
+    margin: 0;
+}
+.filter__option{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+}
+.filter__option input{
+    display: none;
+}
+.filter__option label{
+    display: block;
+    padding: 0.6em 5%;
+}
+.filter__option input:not([value='Not selected']):checked+label{
+    color: #fc4e52;
+}
+.filter__option:hover{
+    color: #fc4e52;
+}
+.filter__category--checked .filter__checked{
+    display: block;
+    color: #fc4e52;
+}
+#filter__drop{
+    display: block;
+}
+.filter--drop .filter__options{
+    display: block;
+}
+@media (min-width:768px) and (max-width:1023px){
+}
+@media (min-width:1024px){
+    .filter__wrp{
+        display: grid;
+        display: -ms-grid;
+        grid-template-columns: repeat(6,1fr);
+        -ms-grid-columns: (1fr)[6];
+        position: relative;
+    }
+    .filter__title{
+        display: none;
+    }
+    #filter__drop{
+        display: none;
+    }
+    .filter__options{
+        position: absolute;
+        z-index: 1;
+        top: 65px;
+        left: 5%;
+        width: 15%;
+        border-top: 1px solid #e5e5e5;
+        border-left: 1px solid #e5e5e5;
+        border-right: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        box-sizing: border-box;
+    }
+    .filter__options--2{
+        left: 20%;
+    }
+    .filter__options--3{
+        left: 35%;
+    }
+    .filter__options--4{
+        left: 50%;
+    }
+    .filter__options--5{
+        left: 65%;
+    }
+    .filter__options--6{
+        left: 80%;
+    }
+    .filter__category{
+        height: 65px;
+        grid-row: 1;
+        -ms-grid-row: 1;
+        border-left: 1px solid #e5e5e5;
+    }
+    .filter__category--2{
+        -ms-grid-column: 2;
+    }
+    .filter__category--3{
+        -ms-grid-column: 3;
+    }
+    .filter__category--4{
+        -ms-grid-column: 4;
+    }
+    .filter__category--5{
+        -ms-grid-column: 5;
+    }
+    .filter__category--6{
+        -ms-grid-column: 6;
+        border-right: 1px solid #e5e5e5;
+    }
+    .filter__category:hover+.filter__options{
+       display: block;
+    }
+    .filter__options--1:hover,
+    .filter__options--2:hover, 
+    .filter__options--3:hover,
+    .filter__options--4:hover,
+    .filter__options--5:hover,
+    .filter__options--6:hover{
+        display: block;
+    }
+    .filter__option:hover{
+        background-color: #f5f5f5;
+    }
+    .filter__category--2{
+        grid-column: 2;
+        -ms-grid-column: 2;
+    }
+    .filter__checked{
+        display: none;
+    }
+    .filter__category--checked{
+        background-color: #f5f5f5;
+    }
+    .filter__category--checked .filter__checked{
+        display: block;
+    }
+    .filter__category--checked .filter__name{
+        font-size: 12px;
+        font-family: 'Roboto',sans-serif;
+    }
+}
 @media (min-width:1300px){
     .filter::after{
         background-color: white;
         background-image: linear-gradient(to left, #ffffff 0.5%, #e5e5e5 50%, #ffffff 99.5%);
+    }
+    .filter__options{
+        width: 16.7%;
+    }
+    .filter__options--1{
+        left: 0;
+    }
+    .filter__options--2{
+        left: 16.7%;
+    }
+    .filter__options--3{
+        left: 33.4%;
+    }
+    .filter__options--4{
+        left: 50.1%;
+    }
+    .filter__options--5{
+        left: 66.8%;
+    }
+    .filter__options--6{
+        left: 83.5%;
     }
 }

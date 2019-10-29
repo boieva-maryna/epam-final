@@ -38,23 +38,218 @@
             </label>
         </nav>
     </header>
-    <main>
-        <section class="filter">
-            <div class="wrp">
-                <section class="filter__cathegory">
-                    <h3 class="filter__title" id="fashion">Fashion</h3>
-                    <label class="filter__option"><input type="radio" name="fashion" checked="true" value="Not selected">Not selected</label>
-                    <label class="filter__option"><input type="radio" name="fashion" value="Nail the 90s">Nail the 90s</label>
-                    <label class="filter__option"><input type="radio" name="fashion" value="Casual style">Casual style</label>
-                    <label class="filter__option"><input type="radio" name="fashion" value="New look">New look</label>
-                    <label class="filter__option"><input type="radio" name="fashion" value="Sport">Sport</label>
-                    <label class="filter__option"><input type="radio" name="fashion" value="Vintage">Vintage</label>
-                    <label class="filter__option"><input type="radio" name="fashion" value="Classical style">Classical style</label>
-                </section>
+    <main class="main">
+        <section class="filter" id="filter">
+            <div class="wrp filter__wrp">
+                <div class="filter__category filter__category--1" id="fashion" data-category="Fashion">
+                    <h4 class="filter__name heading">Fashion</h4>
+                    <span class="icon filter__icon"></span>
+                    <h4 class="filter__checked heading" id="fashion__checked">Fashion</h4>
+                </div>
+                <div class="filter__options filter__options--1">
+                    <h3 class="filter__title heading">Fashion</h3>
+                    <ul>
+                        <li class="filter__option">
+                            <input type="radio" name="fashion" checked value="Not selected" id="not_fashion">
+                            <label for="not_fashion">Not selected</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="fashion" value="Nail the 90s" id="nail_the_90s">
+                            <label for="nail_the_90s">Nail the 90s</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="fashion" value="Casual style" id="casual_style">
+                            <label for="casual_style">Casual style</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="fashion" value="New look" id="new_look">
+                            <label for="new_look">New look</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="fashion" value="Sport" id="sport">
+                            <label for="sport">Sport</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="fashion" value="Vintage" id="vintage">
+                            <label for="vintage">Vintage</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="fashion" value="Classical style" id="classical_style">
+                            <label for="classical_style">Classical style</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter__category filter__category--2" id="product_type" data-category="Product type">
+                    <h4 class="filter__name heading">Product type</h4>
+                    <span class="icon filter__icon"></span>
+                    <h4 class="filter__checked heading" id="product_type__checked">Product type</h4>
+                </div>
+                <div class="filter__options filter__options--2">
+                    <h3 class="filter__title heading">Product type</h3>
+                    <ul>
+                        <li class="filter__option">
+                            <input type="radio" name="product_type" checked value="Not selected" id="not_product_type">
+                            <label for="not_product_type">Not selected</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="product_type" value="Coats & Jackets" id="coats_&_jackets">
+                            <label for="coats_&_jackets">Coats & Jackets</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="product_type" value="Dresses" id="dresses">
+                            <label for="dresses">Dresses</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="product_type" value="Jersey Tops" id="jersey_tops">
+                            <label for="jersey_tops">Jersey Tops</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter__category filter__category--3" id="color" data-category="Color">
+                    <h4 class="filter__name heading">Color</h4>
+                    <span class="icon filter__icon"></span>
+                    <h4 class="filter__checked heading" id="color__checked">Color</h4>
+                </div>
+                <div class="filter__options filter__options--3">
+                    <h3 class="filter__title heading">Color</h3>
+                    <ul>
+                        <li class="filter__option">
+                            <input type="radio" name="color" checked value="Not selected" id="not_color">
+                            <label for="not_color">Not selected</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="color" value="Black" id="black">
+                            <label for="black">Black</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="color" value="Blue" id="blue">
+                            <label for="blue">Blue</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="color" value="Red" id="red">
+                            <label for="red">Red</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="color" value="Green" id="green">
+                            <label for="green">Green</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="color" value="Golden" id="golden">
+                            <label for="golden">Golden</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter__category filter__category--4" id="brand" data-category="Brand">
+                    <h4 class="filter__name heading">Brand</h4>
+                    <span class="icon filter__icon"></span>
+                    <h4 class="filter__checked heading" id="brand__checked">Brand</h4>
+                </div>
+                <div class="filter__options filter__options--4">
+                    <h3 class="filter__title heading">Brand</h3>
+                    <ul>
+                        <li class="filter__option">
+                            <input type="radio" name="brand" checked value="Not selected" id="not_brand">
+                            <label for="not_brand">Not selected</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="brand" value="Chi Chi London" id="chi_chi_london">
+                            <label for="chi_chi_london">Chi Chi London</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="brand" value="Antipodium" id="antipodium">
+                            <label for="antipodium">Antipodium</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="brand" value="Adidas" id="adidas">
+                            <label for="adidas">Adidas</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="brand" value="New Balance" id="new_balance">
+                            <label for="new_balance">New Balance</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="brand" value="River Island" id="river_island">
+                            <label for="river_island">River Island</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter__category filter__category--5" id="size" data-category="Size">
+                    <h4 class="filter__name heading">Size</h4>
+                    <span class="icon filter__icon"></span>
+                    <h4 class="filter__checked heading" id="size__checked">Size</h4>
+                </div>
+                <div class="filter__options filter__options--5">
+                    <h3 class="filter__title heading">Size</h3>
+                    <ul>
+                        <li class="filter__option">
+                            <input type="radio" name="size" checked value="Not selected" id="not_size">
+                            <label for="not_size">Not selected</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="size" value="UK 2" id="uk_2">
+                            <label for="uk_2">UK 2</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="size" value="UK 18" id="uk_18">
+                            <label for="uk_18">UK 18</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="size" value="UK 18L" id="uk_18l">
+                            <label for="uk_18l">UK 18L</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="size" value="UK 20" id="uk_20">
+                            <label for="uk_20">UK 20</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="size" value="UK 20L" id="uk_20l">
+                            <label for="uk_20l">UK 20L</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="size" value="UK 20S" id="uk_20s">
+                            <label for="uk_20s">UK 20S</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="size" value="UK 22S" id="uk_22s">
+                            <label for="uk_22s">UK 22S</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="size" value="UK 22" id="uk_22">
+                            <label for="uk_22">UK 22</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter__category filter__category--6" id="price_range" data-category="Price range">
+                    <h4 class="filter__name heading">Price range</h4>
+                    <span class="icon filter__icon"></span>
+                    <h4 class="filter__checked heading" id="price_range__checked">Price range</h4>
+                </div>
+                <div class="filter__options filter__options--6">
+                    <h3 class="filter__title heading">Price range</h3>
+                    <ul>
+                        <li class="filter__option">
+                            <input type="radio" name="price_range" checked value="Not selected" id="not_price_range">
+                            <label for="not_price_range">Not selected</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="price_range" value=" To £99" id="to_99">
+                            <label for="to_99">To £99</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="price_range" value="£100-£299" id="100_299">
+                            <label for="100_299">£100-£299</label>
+                        </li>
+                        <li class="filter__option">
+                            <input type="radio" name="price_range" value="From £300" id="from_300">
+                            <label for="from_300">From £300</label>
+                        </li>
+                    </ul>
+                </div>
+                <span class="icon filter__icon" id="filter__drop"></span>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="wrp footer__wrp">
             <section class="footer__left">
                 <header><h3 class="heading">Quick Links</h3></header>
@@ -112,5 +307,6 @@
     <script src="data/catalog.js"></script>
     <script src="data/best-offer.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/filter.js"></script>
 </body>
 </html>
