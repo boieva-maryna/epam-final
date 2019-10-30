@@ -32,6 +32,7 @@ function createSlides(arr,parent,num){
         var slide=document.createElement('article');
         slide.setAttribute('data-price',arr[i].price);
         slide.setAttribute('data-slider',num);
+        slide.setAttribute('data-new',arr[i].hasNew)
         slide.className="product";
         slide.innerHTML='<a href="item.html"><figure class="product__img">\
                 <img src='+arr[i].thumbnail+'>\

@@ -107,8 +107,20 @@ a:active{
     font-size: 1.8em;
     color: #fc4e52;
 }
+.product[data-new='true'] .product__img::before{
+    content: 'NEW';
+    display: block;
+    font-size: 14px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 700;
+    position: absolute;
+    color: #ffffff;
+    background-color: #fc4e52;
+    padding: 0.5em;
+    top:1em;
+}
 .product:hover .product__img::after{
-    background-color: rgba(143, 143, 143,0.3);
+    background-color: rgba(71, 71, 71,0.5);
     content: "View item";
 }
 .product__title,.product__price{
