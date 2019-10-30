@@ -87,11 +87,6 @@
     -ms-grid-column: 3;
     grid-column: 3;
     position: relative;
-    display: flex;
-    display: flexbox;
-    flex-direction: column;
-    align-items: center;
-    -ms-flex-align: center;
 }
 .slider:first-of-type{
     -ms-grid-column: 1;
@@ -137,7 +132,7 @@
     display: none;
 }
 .slider .product:first-of-type{
-    display: inline-block;
+    display: block;
 }
 .big-button{
     align-self: center;
@@ -223,6 +218,8 @@
         grid-column: 1;
         -ms-grid-row: 1;
         grid-row: 1;
+        margin-right: 1.5em;
+        margin-left: 0;
     }
     #result{
         grid-column: 1/3;
