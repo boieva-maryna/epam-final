@@ -31,8 +31,5 @@ var showMore = document.getElementById('showMore');
 showMore.addEventListener('click', function show(e) {
   e.preventDefault();
   var productsSection = document.querySelector('.products');
-
-  if (productsSection.offsetWidth < 767) {
-    productsSection.classList.remove('products--small');
-  }
+  productsSection.classList.remove('products--small');
 });

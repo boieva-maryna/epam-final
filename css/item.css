@@ -1,26 +1,12 @@
 .main{
     flex-grow: 0;
 }
-.price--crossed{
-    display: inline-block;
-}
-.products__wrp{
-    display:flex;
-    display: flexbox;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    -ms-flex-pack: justify;
-}
 .main .promo::before{
     content: "";
     display: block;
     width: 100%;
     height: 1px;
     background-color: #e5e5e5;
-}
-.big-button{
-    margin: 75px auto 100px;
 }
 .promo header{
     color: #ffffff;
@@ -47,26 +33,7 @@
     height: 33vw;
     max-height: 385px;
 }
-.products__promo header{
-    position: static;
-    width: 100%;
-}
-.products__promo{
-    padding-top: 20px;
-    padding-bottom: 100px;
-    flex: 1 0 100%;
-    order: 1;
-}
-.products__promo span{
-    color: #fc4e52;
-}
-.products--small .product:nth-of-type(n+14):nth-of-type(-n+17){
-    display: none;
-}
 @media (max-width:767px){
-    .products--small .product:nth-of-type(n+10):nth-of-type(-n+17){
-        display: none;
-    }
     .promo__article h3{
         font-size: 20px;
     }
@@ -79,15 +46,6 @@
     .promo__article:nth-child(2),.promo__article:nth-child(3){
         display: none;
     }
-    .products__wrp{
-        padding-top: 20px;
-    }
-    .product{
-        flex-basis: 47%;
-    }
-    .product:nth-of-type(n+4){
-        order: 1;
-    }
 }
 @media (min-width:768px) and (max-width:1023px){
     .promo__article h3{
@@ -99,28 +57,10 @@
     .promo__article:nth-child(3){
         display: none;
     }
-    .products__wrp{
-        padding-top: 40px;
-    }
-    .product{
-        flex-basis: 28.6%;
-    }
-    .product:nth-of-type(n+5){
-        order: 1;
-    }
 }
 @media (min-width:1024px){
     .promo__article h3{
         font-size: 28px;
-    }
-    .products__wrp{
-        padding-top: 60px;
-    }
-    .product{
-        flex-basis: 20.7%;
-    }
-    .product:nth-of-type(n+6){
-        order: 1;
     }
 }
 @media (min-width:1300px){
