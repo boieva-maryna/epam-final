@@ -15,7 +15,7 @@
     display: grid;
     display: -ms-grid;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     overflow: hidden;
 }
 .filter__icon{
@@ -49,7 +49,10 @@
     text-align: left;
 }
 .filter__options{
-    display: none;
+    height: 0;
+    opacity: 0;
+    transition:opacity 400ms linear;
+    display: block;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -106,6 +109,7 @@
     }
     .filter__category--1{
         -ms-grid-column: 1;
+        grid-column: 1;
     }
     .filter__category--2{
         grid-column: 2/4;
@@ -120,9 +124,11 @@
     }
     .filter__category--4{
         -ms-grid-column: 5;
+        grid-column: 5;
     }
     .filter__category--5{
         -ms-grid-column: 6;
+        grid-column: 6;
     }
     .filter__category--6{
         grid-column:7 ;
@@ -185,6 +191,9 @@
         grid-column: 2/5;
         -ms-grid-column-span:3 ;
     }
+    .filter__category--4 .filter__checked::after{
+        content: none;
+    }
 }
 @media (min-width:768px) and (max-width:1023px){
     .filter__wrp{
@@ -202,8 +211,12 @@
     .filter--drop #filter__drop{
         position: absolute;
     }
+    .filter--drop .filter__options{
+         padding-top: 50px;
+    }
     .filter__category--1{
         -ms-grid-column: 1;
+        grid-column: 1;
     }
     .filter__category--2{
         grid-column: 2/4;
@@ -216,17 +229,16 @@
     }
     .filter__category--4{
         -ms-grid-column: 5;
+        grid-column: 5;
     }
     .filter__category--5{
         -ms-grid-column: 6;
+        grid-column: 6;
     }
     .filter__category--6{
         grid-column: 7/9;
         -ms-grid-column: 7;
         -ms-grid-column-span: 2;
-    }
-    .filter__options{
-        padding-top: 50px;
     }
     .filter__options--1{
         grid-row: 2;
@@ -268,6 +280,9 @@
         -ms-grid-column: 8;
         -ms-grid-column-span: 2;
     }
+    .filter__category--6 .filter__checked::after{
+        content: none;
+    }
 }
 @media (max-width:1023px){
     .filter__wrp{
@@ -275,17 +290,20 @@
     }
     #filter__drop{
         display: block;
-        width: 22px;
-        padding: 0 10px;
+        width: 20px;
+        padding:0 15px;
+        left: 100%;
+        margin-left: -50px;
         background-color: white;
-        box-shadow: -20px 3px 6px 0 white;
+        box-shadow: -10px 3px 6px 0 white;
     }
     .filter--drop #filter__drop{
         background-image: url('../img/ico_close.svg');
         background-size: 12px;
     }
     .filter--drop .filter__options{
-       display: block;
+       height: auto;
+       opacity: 1;
     }
     .filter__icon{
         display: none;
@@ -302,6 +320,9 @@
     }
     .filter__option::before{
         content:"• ";
+    }
+    .filter__checked::after{
+        content: ",";
     }
 }
 @media (min-width:1024px){
@@ -378,25 +399,32 @@
     }
     .filter__category--1{
         -ms-grid-column: 1;
+        grid-column: 1;
     }
     .filter__category--2{
         -ms-grid-column: 2;
+        grid-column: 2;
     }
     .filter__category--3{
         -ms-grid-column: 3;
+        grid-column: 3;
     }
     .filter__category--4{
         -ms-grid-column: 4;
+        grid-column: 4;
     }
     .filter__category--5{
         -ms-grid-column: 5;
+        grid-column: 5;
     }
     .filter__category--6{
         -ms-grid-column: 6;
+        grid-column: 6;
         border-right: 1px solid #e5e5e5;
     }
     .filter__category:hover+.filter__options{
-       display: block;
+       height: auto;
+       opacity: 1;
     }
     .filter__options--1:hover,
     .filter__options--2:hover, 
@@ -404,7 +432,8 @@
     .filter__options--4:hover,
     .filter__options--5:hover,
     .filter__options--6:hover{
-        display: block;
+        height: auto;
+       opacity: 1;
     }
     .filter__option:hover{
         background-color: #f5f5f5;
