@@ -25,18 +25,20 @@
             <span class="icon  dropdown__icon"></span>
         </a>
         <nav class="header__menu">
-            <a href="#">Women</a>
-            <a href="#">Men</a>
-            <a href="#">Handbags</a>
-            <a href="#">Accessories</a>
+            <a href="catalog.html" data-filter_by="category:women">Women</a>
+            <a href="catalog.html" data-filter_by="category:men">Men</a>
+            <a href="catalog.html" data-filter_by="category:handbags">Handbags</a>
+            <a href="catalog.html" data-filter_by="category:accessories">Accessories</a>
             <a href="#">Sale</a>
             <a href="#">New Arrivals</a>
             <a href="#">Clearance</a>
             <a href="#">Store Locator</a>
-            <label class="header__search" for="search">
-                <input type="text" id="search" placeholder="Style name">
-                <img class="icon" src="img/ico_search.svg" alt="search icon">
-            </label>
+            <form action="#" id="search__form">
+                <label class="header__search" for="search">
+                    <input type="text" id="search" placeholder="Style name">
+                    <img class="icon" src="img/ico_search.svg" alt="search icon">
+                </label>
+            </form>
         </nav>
     </header>
     <main class="main">
@@ -249,9 +251,46 @@
                 <span class="icon filter__icon" id="filter__drop"></span>
             </div>
         </section>
-        <section>
-            <div class="wrp">
-                
+        <section class="products products--small">
+            <div class="wrp products__wrp">
+                <article class="promo__article products__promo">
+                    <header>
+                        <h3 class="heading">Last weekend <span>extra 50%</span> off on all reduced boots and shoulder bags</h3>
+                        <p class="cursive">This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2019</p>
+                    </header>
+                </article>
+            </div>
+        </section>
+        <a href="#" class="big-button" id="showMore">Show more</a>
+        <section class="promo">
+            <div class="promo__images wrp--big">
+                <article class="promo__article">
+                    <a href="#">
+                        <header>
+                            <h3 class="heading">Adidas Blue</h3>
+                            <p class="cursive">For men</p>
+                        </header>
+                        <img src="img/Adidas_Blue.jpg" alt="Adidas Blue">
+                    </a>
+                </article>
+                <article class="promo__article">
+                    <a href="#">
+                        <header>
+                            <h3 class="heading">Repair Patches</h3>
+                            <p class="price">£ 150.50</p>
+                        </header>
+                        <img src="img/Repair_patches.jpg" alt="Repair patches">
+                    </a>
+                </article>
+                <article class="promo__article">
+                        <a href="#">
+                            <header>
+                                <h3 class="heading">Sale</h3>
+                                <p class="cursive">-70%</p>
+                            </header>
+                            <img src="img/bag.jpg" alt="Bag">
+                        </a>
+                </article>
             </div>
         </section>
     </main>
@@ -313,6 +352,8 @@
     <script src="data/catalog.js"></script>
     <script src="data/best-offer.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/catalog.js"></script>
     <script src="js/filter.js"></script>
+    <script src="js/current-item.js"></script>
 </body>
 </html>

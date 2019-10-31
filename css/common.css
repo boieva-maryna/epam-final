@@ -58,6 +58,9 @@ a:hover{
 a:active{
     color:#e5e5e5;
 }
+a[data-active_filter='true']{
+    color: #fc4e52;
+}
 .wrp{
     box-sizing: border-box;
     padding: 0 5%;
@@ -70,6 +73,24 @@ a:active{
     max-width: 1300px;
     margin: 0 auto;
 }
+.promo__images{
+    display: flex;
+    display: flexbox;
+}
+.promo__images img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.promo .promo__article{
+    position: relative;
+    overflow: hidden;
+    min-height: 240px;
+}
+.promo__article header{
+    position: absolute;
+    z-index: 1;
+}
 .product__img img{
     display: block;
     margin: 0 auto;
@@ -77,16 +98,14 @@ a:active{
     max-width: 100%;
 }
 .product__img{
-    margin: 0;
+    margin:0 auto;
     margin-bottom: 10%;
     position: relative;
     max-width: 240px;
 }
 .product{
     box-sizing: border-box;
-    flex-direction: column;
-    align-items: center;
-    -ms-flex-align: center;
+    display: inline-block;
 }
 .product__img::after{
     position: absolute;

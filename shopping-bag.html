@@ -23,18 +23,20 @@
                     <span class="icon  dropdown__icon"></span>
                 </a>
                 <nav class="header__menu">
-                    <a href="#">Women</a>
-                    <a href="#">Men</a>
-                    <a href="#">Handbags</a>
-                    <a href="#">Accessories</a>
+                    <a href="catalog.html" data-filter_by="category:women">Women</a>
+                    <a href="catalog.html" data-filter_by="category:men">Men</a>
+                    <a href="catalog.html" data-filter_by="category:handbags">Handbags</a>
+                    <a href="catalog.html" data-filter_by="category:accessories">Accessories</a>
                     <a href="#">Sale</a>
-                    <a href="#">New Arrivals</a>
+                    <a href="">New Arrivals</a>
                     <a href="#">Clearance</a>
                     <a href="#">Store Locator</a>
-                    <label class="header__search" for="search">
-                        <input type="text" id="search" placeholder="Style name">
-                        <img class="icon" src="img/ico_search.svg" alt="search icon">
-                    </label>
+                    <form action="#" id="search__form">
+                        <label class="header__search" for="search">
+                            <input type="text" id="search" placeholder="Style name">
+                            <img class="icon" src="img/ico_search.svg" alt="search icon">
+                        </label>
+                    </form>
                 </nav>
             </header>
             <main class="main"></main>
@@ -93,6 +95,9 @@
                     </nav>
                 </div>
             </footer>
+    <script>
+        localStorage.removeItem('filter-by');
+    </script>
     <script src="data/catalog.js"></script>
     <script src="data/best-offer.js"></script>
     <script src="js/menu.js"></script>

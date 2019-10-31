@@ -24,18 +24,20 @@
             <span class="icon  dropdown__icon"></span>
         </a>
         <nav class="header__menu">
-            <a href="#">Women</a>
-            <a href="#">Men</a>
-            <a href="#">Handbags</a>
-            <a href="#">Accessories</a>
+            <a href="catalog.html" data-filter_by="category:women">Women</a>
+            <a href="catalog.html" data-filter_by="category:men">Men</a>
+            <a href="catalog.html" data-filter_by="category:handbags">Handbags</a>
+            <a href="catalog.html" data-filter_by="category:accessories">Accessories</a>
             <a href="#">Sale</a>
-            <a href="#">New Arrivals</a>
+            <a href="">New Arrivals</a>
             <a href="#">Clearance</a>
             <a href="#">Store Locator</a>
-            <label class="header__search" for="search">
-                <input type="text" id="search" placeholder="Style name">
-                <img class="icon" src="img/ico_search.svg" alt="search icon">
-            </label>
+            <form action="#" id="search__form">
+                <label class="header__search" for="search">
+                    <input type="text" id="search" placeholder="Style name">
+                    <img class="icon" src="img/ico_search.svg" alt="search icon">
+                </label>
+            </form>
         </nav>
     </header>
     <main class="main">
@@ -86,7 +88,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="shopping-bag.html" class="big-button">Add to bag</a>
+                <a href="shopping-bag.html" class="big-button" id="offer__button">Add to bag</a>
             </div>
         </section>
         <section class="arrival__section">
@@ -95,7 +97,7 @@
                     <h2 class="heading section__title">New arrivals</h2>
                 </header>
                 <div class="arrival">
-                    <article class="product" data-new="true">
+                    <article class="product" data-new="true" data-id="8c061815-6a7d-4465-bb78-1bdc6c5adebf">
                         <a href="item.html">
                             <figure class="product__img">
                                 <img src='img/Only_Skinny_Jeans.jpg'>
@@ -104,7 +106,7 @@
                             <h5 class="price product__price">£65.50</h5>
                         </a>
                     </article>
-                    <article class="product" data-new="true">
+                    <article class="product" data-new="true" data-id="8b300772-eee3-4ff1-b091-e89f17e0e469">
                         <a href="item.html">
                             <figure class="product__img">
                                 <img src='img/Neck_Knitted_Jumper.jpg'>
@@ -113,7 +115,7 @@
                             <h5 class="price product__price">£76.25</h5>
                         </a>
                     </article>
-                    <article class="product">
+                    <article class="product" data-id="9ded7821-e510-4a16-ba9f-57c1e3442ad8">
                         <a href="item.html">
                             <figure class="product__img">
                                 <img src='img/Turtle_Neck_Jumper_in_Rib.jpg'>
@@ -122,7 +124,7 @@
                             <h5 class="price product__price">£130.25</h5>
                         </a>
                     </article>
-                    <article class="product">
+                    <article class="product" data-id="739d3ae0-6dca-4453-a7a4-a94b841a296d">
                         <a href="item.html">
                             <figure class="product__img">
                                 <img src='img/With_Patchwork_Crochet.jpg'>
@@ -170,7 +172,7 @@
             <section class="footer__order">
                 <h3 class="heading">Order by phone</h3>
                 <p class="link">
-                    <ahref="tel:8-800-409-47-12">8-800-409-47-12</a>
+                    <a href="tel:8-800-409-47-12">8-800-409-47-12</a>
                 </p>
             </section>
             <p class="footer__delivery cursive">We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
@@ -191,9 +193,13 @@
             </nav>
         </div>
     </footer>
+    <script>
+        localStorage.removeItem('filter-by');
+    </script>
     <script src="data/catalog.js"></script>
     <script src="data/best-offer.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/offer.js"></script>
+    <script src="js/current-item.js"></script>
 </body>
 </html>
