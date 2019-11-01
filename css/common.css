@@ -136,29 +136,51 @@ a[data-active_filter='true']{
     padding: 0.5em;
     top:1em;
 }
-.product:hover .product__img::after{
+.product:hover .product__img::after, .thumbnail[data-active='true'] .thumbnail__img::after{
     background-color: rgba(71, 71, 71,0.5);
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.product:hover .product__img::after{
+    padding-top: 50%;
+    box-sizing: border-box;
     content: "View item";
 }
 .product__title,.product__price{
     font-size: 1.1rem;
 }
-.big-button{
-    font-size: 24px;
-    display: block;
-    height: 77px;
-    width: 100%;
-    line-height: 77px;
+.button{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
     background-color: white;
-    border: 1px solid #e5e5e5;
     font-family: 'Open Sans',sans-serif;
     font-weight: 700;
     text-align: center;
+    padding: 0 20px;
+}
+.button[data-checked="true"]{
+    border: 1px solid #e5e5e5;
+}
+.button:hover{
+    border-color: #fc4e52;
+}
+.button--big{
+    display: block;
+    font-size: 24px;
     z-index: 1;/* при наложении ячеек сетки кнопка не нажималась*/
     position: relative;/*в ie без для static не работает z-index*/
-}
-.big-button:hover{
-    border-color: #fc4e52;
+    max-width: 340px;
+    height: 77px;
+    width: 100%;
+    line-height: 77px;
+    padding: 0;
+    border: 1px solid #e5e5e5;
+    margin: 0 auto;
 }
 .new-label{
     color: white;
@@ -199,13 +221,13 @@ a[data-active_filter='true']{
     .link, .footer__questions .small-heading{
         font-size: 12px;
     }
-    .heading{
+    .heading, .cursive{
         font-size: 14px;
     }
     .product__title,.product__price{
         font-size: 1rem;
     }
-    .big-button{
+    .button--big{
         max-width: 220px;
         font-size: 20px;
     }

@@ -41,8 +41,54 @@
                 </nav>
             </header>
             <main class="main">
+                <header class="main__header">
+                    <div class="wrp main__header__wpr">
+                            <h1 class="heading"><a href="catalog.html">< Back to catalog</a></h1>
+                    </div>
+                </header>
                 <section class="product-details">
-                    <div class="wrp product-details__wrp"></div>
+                    <div class="wrp product-details__wrp">
+                        <div class="product-details__preview" id="productGallery">
+                            <div class="preview">
+                                <figure class="preview__img" id="preview">
+                                    <img src="img/Dark_classic_fit_suit_1.jpg">
+                                </figure>
+                            </div>
+                            <div class="thumbnail" data-active="true">
+                                <figure class="thumbnail__img">
+                                    <img src="img/Dark_classic_fit_suit_1.jpg">
+                                </figure>
+                            </div>
+                            <div class="thumbnail">
+                                    <figure class="thumbnail__img">
+                                        <img src="img/Dark_classic_fit_suit_2.jpg">
+                                    </figure>
+                            </div>
+                            <div class="thumbnail">
+                                <figure class="thumbnail__img">
+                                    <img src="img/Dark_classic_fit_suit_3.jpg">
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="product-details__description-container" id="productsDetails">
+                            <h2 class="small-heading product-details__title">Dark classic fit suit</h2>
+                            <p class="cursive product-details__description">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs
+                                        and a subtle stripe pattern throughout. </p>
+                            <p class="product-details__price price">£180.60</p>
+                            <div class="product-details__buttons product-details__buttons--size">
+                                <span class="product-details__option">Size</span>
+                                <a href="#" class="button" data-product_details="size:UK 52" data-checked="true">UK 52</a>
+                                <a href="#" class="button" data-product_details="size:UK 54">UK 54</a>
+                                <a href="#" class="button" data-product_details="size:UK 56">UK 56</a>
+                            </div>
+                            <div class="product-details__buttons product-details__buttons--color">
+                                <span class="product-details__option">Color</span>
+                                <a href="#" class="button" data-product_details="color:Black">Black</a>
+                                <a href="#" class="button" data-product_details="color:Blue" data-checked="true">Blue</a>
+                            </div>
+                            <a href="shopping-bag" class="button button--big" id="addToBag">Add to bag</a>
+                        </div>
+                    </div>
                 </section>
                 <section class="promo">
                     <div class="promo__images wrp--big">
@@ -137,5 +183,6 @@
     <script src="data/catalog.js"></script>
     <script src="data/best-offer.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/item.js"></script>
 </body>
 </html>
