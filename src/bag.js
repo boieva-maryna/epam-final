@@ -36,7 +36,7 @@ function deleteFromShoppingBag(product){
 function getBagSum(shoppingBag){
     let count=0;
     for(let i=0;i<shoppingBag.length;i++){
-        count+=Number.parseFloat(shoppingBag[i].price*shoppingBag[i].quantity);
+        count+=shoppingBag[i].price*shoppingBag[i].quantity;
     }
     return count;
 }

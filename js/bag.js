@@ -45,7 +45,7 @@ function getBagSum(shoppingBag) {
   var count = 0;
 
   for (var i = 0; i < shoppingBag.length; i++) {
-    count += Number.parseFloat(shoppingBag[i].price * shoppingBag[i].quantity);
+    count += shoppingBag[i].price * shoppingBag[i].quantity;
   }
 
   return count;

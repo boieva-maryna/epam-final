@@ -1,6 +1,8 @@
 let currentItem=localStorage.getItem('current-item');
-if(currentItem!=null){
-    let item=window.catalog.filter((el)=>el.id==currentItem)[0];
+if(currentItem===null){
+    currentItem="80d32566-d81c-4ba0-9edf-0eceda3b4360"//dark classic fit suit, товар,который был на макете
+}
+let item=window.catalog.filter((el)=>el.id==currentItem)[0];
     document.getElementById('preview').innerHTML=`<img src="${item.preview[0]}">`;
     for(let i=0;i<document.querySelectorAll('.thumbnail__img').length;i++){
         document.querySelectorAll('.thumbnail__img')[i].innerHTML=`<img src="${item.preview[i]}">`;
@@ -25,8 +27,6 @@ if(currentItem!=null){
     </div>` :""}
     <a href="shopping-bag.html" class="button button--big" id="addToBag">Add to bag</a>
     `;
-}
-else currentItem="80d32566-d81c-4ba0-9edf-0eceda3b4360"//dark classic fit suit, товар,который был на макете
 document.getElementById('productGallery').addEventListener('click',function(e){
     if(e.target.parentNode.parentNode.className=="thumbnail") switchPhoto(e.target);
 },false);
@@ -47,15 +47,14 @@ function chooseSizeOrColor(e){
 }
 document.getElementById('addToBag').addEventListener("click",function(e){
     let details=document.querySelectorAll('[data-checked="true"]');
-    let thumbnail=document.querySelector('[data-active="true"]').querySelector('img').getAttribute('src');
     let product={};
     for(let i=0;i<details.length;i++){
         let detail=details[i].getAttribute('data-product_details');
         product[detail.split(':')[0]]=detail.split(":")[1];
     }
     product.id=currentItem;
-    product.price=document.querySelector('.product-details__price').innerHTML.split("£")[1];
-    product.thumbnail=thumbnail;
-    product.title=document.querySelector('.product-details__title').innerHTML;
+    product.price=item.price;
+    product.thumbnail=item.thumbnail;
+    product.title=item.title;
     addToShoppingBag(product);
 });
