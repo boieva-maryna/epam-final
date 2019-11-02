@@ -1,8 +1,7 @@
 .main{
     flex-grow: 0;
 }
-.main .promo::before, 
-.main__header::after{
+.main .promo::before{
     content: "";
     display: block;
     width: 100%;
@@ -204,8 +203,7 @@
     }
 }
 @media (min-width:1300px){
-    main .promo::before,
-    .main__header::after{
+    main .promo::before{
         background-color: white;
         background-image: linear-gradient(to left, #ffffff 0.5%, #e5e5e5 50%, #ffffff 99.5%);
     }

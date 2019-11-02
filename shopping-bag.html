@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shopping-bag.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
@@ -39,7 +40,45 @@
                     </form>
                 </nav>
             </header>
-            <main class="main"></main>
+            <main class="main">
+                <header class="main__header">
+                    <div class="wrp main__header__wpr">
+                            <h1 class="heading">Shopping bag</h1>
+                    </div>
+                </header>
+                <section class="bag-products" id="bagProducts">
+                    <div class="wrp bag-products__wrp">
+                        <article class="product product--bag" data-new="true" data-id="8c061815-6a7d-4465-bb78-1bdc6c5adebf">
+                                <a href="item.html">
+                                    <figure class="product__img">
+                                        <img src='img/Only_Skinny_Jeans.jpg'>
+                                    </figure>
+                                </a>
+                                <div class="product--bag__details">
+                                    <h4 class="small-heading product__title">Only Skinny Jeans</h4>
+                                    <h5 class="price product__price">£65.50</h5>
+                                    <p>Color</p>
+                                    <p>Size</p>
+                                    <p>Quantity<button class="control minus">-</button><span class="quantity">1</span><button class="control plus">+</button></p>
+                                    <h4 class="small-heading product__title product__remove">Remove item</h4>
+                                </div>
+                        </article>
+                    </div>
+                </section>
+                <div class="wrp--big">
+                    <p class="heading">You've qualified for Free UK Next Day Delivery on your order. Don't forget to enter the code <span>nexday</span> at checkout</p>
+                </div>
+                <section class="bag-discount">
+                    <div class="wrp">
+                        <a href="#" class="small-heading" id="emptyBag">Empty bag</a>
+                        <a href="#" class="button button--big" id="checkout">Checkout</a>
+                        <div>
+                            <h2 class="price" id="discount"></h2>
+                            <h2 class="small-heading bag__total">Total price:<span id="total">£</span></h2>
+                        </div>
+                    </div>
+                </section>
+            </main>
             <footer class="footer">
                 <div class="wrp footer__wrp">
                     <section class="footer__left">
@@ -101,5 +140,6 @@
     <script src="data/catalog.js"></script>
     <script src="data/best-offer.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/current-item.js"></script>
 </body>
 </html>

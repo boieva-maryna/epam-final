@@ -23,7 +23,7 @@ if(currentItem!=null){
             else return `<a href="#" class="button" data-product_details="size:${color}">${color}</a>`;
         }).join("")}
     </div>` :""}
-    <a href="shopping-bag" class="button button--big" id="addToBag">Add to bag</a>
+    <a href="shopping-bag.html" class="button button--big" id="addToBag">Add to bag</a>
     `;
 }
 document.getElementById('productGallery').addEventListener('click',function(e){
@@ -31,6 +31,6 @@ document.getElementById('productGallery').addEventListener('click',function(e){
 },false);
 function switchPhoto(elem){
     document.querySelector('[data-active="true"]').setAttribute('data-active',false);
-    document.querySelector('.preview__img').firstChild.setAttribute('src',elem.getAttribute('src'));
+    document.querySelector('.preview__img').firstElementChild.setAttribute('src',elem.getAttribute('src'));
     elem.parentNode.parentNode.setAttribute('data-active',true);
 }
