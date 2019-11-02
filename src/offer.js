@@ -8,6 +8,8 @@ for(var i=0;i<window.catalog.length;i++){
 right=right.reverse();
 var slider_wrp=document.getElementsByClassName('slider__wrapper');
 var sliders=document.getElementsByClassName('slider');
+var addToBag=document.getElementById('addToBag');
+addToBag.addEventListener('click',clickAddToBag);
 createSlides(left,slider_wrp[0],0);
 createSlides(right,slider_wrp[1],1);
 countPrice();
@@ -78,4 +80,25 @@ function countPrice(){
     }
     document.getElementById('oldPrice').innerHTML=`£${price}`;
     document.getElementById('newPrice').innerHTML=`£${(price-window.bestOffer.discount)}`;
+}
+function clickAddToBag(e){
+    e.preventDefault();
+    let products=document.querySelectorAll('[data-active="true"]');
+    let product1={id:products[0].getAttribute('data-id')};
+    let product2={id:products[1].getAttribute('data-id')};
+    for(let i=0;i<left.length;i++){
+        if(left[i].id===product1.id){
+            product1.size=left[i].sizes[0];
+            product1.color=left[i].colors[0];
+        }
+    }
+    for(let i=0;i<right.length;i++){
+        if(right[i].id===product2.id){
+            product2.size=right[i].sizes[0];
+            product2.color=right[i].colors[0];
+        }
+    }
+    addToShoppingBag(product1);
+    addToShoppingBag(product2);
+    localStorage.setItem('shopping-bag-discount',window.bestOffer.discount);
 }

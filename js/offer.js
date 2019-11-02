@@ -12,6 +12,8 @@ for (var i = 0; i < window.catalog.length; i++) {
 right = right.reverse();
 var slider_wrp = document.getElementsByClassName('slider__wrapper');
 var sliders = document.getElementsByClassName('slider');
+var addToBag = document.getElementById('addToBag');
+addToBag.addEventListener('click', clickAddToBag);
 createSlides(left, slider_wrp[0], 0);
 createSlides(right, slider_wrp[1], 1);
 countPrice();
@@ -80,4 +82,33 @@ function countPrice() {
 
   document.getElementById('oldPrice').innerHTML = "\xA3".concat(price);
   document.getElementById('newPrice').innerHTML = "\xA3".concat(price - window.bestOffer.discount);
+}
+
+function clickAddToBag(e) {
+  e.preventDefault();
+  var products = document.querySelectorAll('[data-active="true"]');
+  var product1 = {
+    id: products[0].getAttribute('data-id')
+  };
+  var product2 = {
+    id: products[1].getAttribute('data-id')
+  };
+
+  for (var _i = 0; _i < left.length; _i++) {
+    if (left[_i].id === product1.id) {
+      product1.size = left[_i].sizes[0];
+      product1.color = left[_i].colors[0];
+    }
+  }
+
+  for (var _i2 = 0; _i2 < right.length; _i2++) {
+    if (right[_i2].id === product2.id) {
+      product2.size = right[_i2].sizes[0];
+      product2.color = right[_i2].colors[0];
+    }
+  }
+
+  addToShoppingBag(product1);
+  addToShoppingBag(product2);
+  localStorage.setItem('shopping-bag-discount', window.bestOffer.discount);
 }
