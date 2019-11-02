@@ -31,7 +31,6 @@ function switchPhoto(elem) {
 }
 
 document.getElementById('addToBag').addEventListener("click", function (e) {
-  e.preventDefault();
   var details = document.querySelectorAll('[data-checked="true"]');
   var product = {};
 
