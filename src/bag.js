@@ -38,6 +38,7 @@ function getBagSum(shoppingBag){
     for(let i=0;i<shoppingBag.length;i++){
         for(let j=0;j<window.catalog.length;j++){
             if(shoppingBag[i].id===window.catalog[j].id) {
+                console.log(shoppingBag[i]);
                 count+=(window.catalog[j].discountedPrice*shoppingBag[i].quantity);
             }
         }

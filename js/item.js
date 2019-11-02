@@ -40,5 +40,6 @@ document.getElementById('addToBag').addEventListener("click", function (e) {
     product[detail.split(':')[0]] = detail.split(":")[1];
   }
 
+  product.id = currentItem;
   addToShoppingBag(product);
 });

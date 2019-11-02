@@ -41,5 +41,6 @@ document.getElementById('addToBag').addEventListener("click",function(e){
         let detail=details[i].getAttribute('data-product_details');
         product[detail.split(':')[0]]=detail.split(":")[1];
     }
+    product.id=currentItem;
     addToShoppingBag(product);
 });
