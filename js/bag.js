@@ -46,8 +46,7 @@ function getBagSum(shoppingBag) {
   for (var i = 0; i < shoppingBag.length; i++) {
     for (var j = 0; j < window.catalog.length; j++) {
       if (shoppingBag[i].id === window.catalog[j].id) {
-        console.log(shoppingBag[i]);
-        count += window.catalog[j].discountedPrice * shoppingBag[i].quantity;
+        count += window.catalog[j].discountedPrice !== null ? window.catalog[j].discountedPrice * shoppingBag[i].quantity : window.catalog[j].price * shoppingBag[i].quantity;
       }
     }
   }
@@ -56,7 +55,6 @@ function getBagSum(shoppingBag) {
 }
 
 function getBagQuantity(shoppingBag) {
-  console.log(shoppingBag);
   var quantity = 0;
 
   for (var i = 0; i < shoppingBag.length; i++) {

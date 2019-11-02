@@ -20,12 +20,13 @@ if(currentItem!=null){
         <span class="product-details__option">Color</span>
         ${item.colors.map((color,index)=>{
             if(index===0) return `<a href="#" class="button" data-product_details="color:${color}" data-checked="true">${color}</a>`;
-            else return `<a href="#" class="button" data-product_details="size:${color}">${color}</a>`;
+            else return `<a href="#" class="button" data-product_details="color:${color}">${color}</a>`;
         }).join("")}
     </div>` :""}
     <a href="shopping-bag.html" class="button button--big" id="addToBag">Add to bag</a>
     `;
 }
+else currentItem="80d32566-d81c-4ba0-9edf-0eceda3b4360"//dark classic fit suit, товар,который был на макете
 document.getElementById('productGallery').addEventListener('click',function(e){
     if(e.target.parentNode.parentNode.className=="thumbnail") switchPhoto(e.target);
 },false);
@@ -33,6 +34,16 @@ function switchPhoto(elem){
     document.querySelector('[data-active="true"]').setAttribute('data-active',false);
     document.querySelector('.preview__img').firstElementChild.setAttribute('src',elem.getAttribute('src'));
     elem.parentNode.parentNode.setAttribute('data-active',true);
+}
+document.getElementById('productsDetails').addEventListener('click',chooseSizeOrColor);
+function chooseSizeOrColor(e){
+    if(e.target.hasAttribute('data-product_details')){
+        e.preventDefault();
+        let details=e.target.getAttribute('data-product_details');
+        let curr=document.querySelector(`[data-product_details^=${details.split(':')[0]}][data-checked="true"]`)
+        curr.setAttribute('data-checked',false);
+        e.target.setAttribute('data-checked',true);
+    }
 }
 document.getElementById('addToBag').addEventListener("click",function(e){
     let details=document.querySelectorAll('[data-checked="true"]');

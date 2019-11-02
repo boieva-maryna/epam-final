@@ -109,5 +109,4 @@ function clickAddToBag(e) {
 
   addToShoppingBag(product1);
   addToShoppingBag(product2);
-  localStorage.setItem('shopping-bag-discount', window.bestOffer.discount);
 }
