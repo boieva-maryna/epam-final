@@ -35,7 +35,6 @@ function switchPhoto(elem){
     elem.parentNode.parentNode.setAttribute('data-active',true);
 }
 document.getElementById('addToBag').addEventListener("click",function(e){
-    e.preventDefault();
     let details=document.querySelectorAll('[data-checked="true"]');
     let product={};
     for(let i=0;i<details.length;i++){
