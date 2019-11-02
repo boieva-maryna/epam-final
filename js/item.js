@@ -29,3 +29,17 @@ function switchPhoto(elem) {
   document.querySelector('.preview__img').firstElementChild.setAttribute('src', elem.getAttribute('src'));
   elem.parentNode.parentNode.setAttribute('data-active', true);
 }
+
+document.getElementById('addToBag').addEventListener("click", function (e) {
+  e.preventDefault();
+  var details = document.querySelectorAll('[data-checked="true"]');
+  var product = {};
+
+  for (var _i = 0; _i < details.length; _i++) {
+    var detail = details[_i].getAttribute('data-product_details');
+
+    product[detail.split(':')[0]] = detail.split(":")[1];
+  }
+
+  addToShoppingBag(product);
+});

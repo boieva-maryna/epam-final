@@ -34,3 +34,13 @@ function switchPhoto(elem){
     document.querySelector('.preview__img').firstElementChild.setAttribute('src',elem.getAttribute('src'));
     elem.parentNode.parentNode.setAttribute('data-active',true);
 }
+document.getElementById('addToBag').addEventListener("click",function(e){
+    e.preventDefault();
+    let details=document.querySelectorAll('[data-checked="true"]');
+    let product={};
+    for(let i=0;i<details.length;i++){
+        let detail=details[i].getAttribute('data-product_details');
+        product[detail.split(':')[0]]=detail.split(":")[1];
+    }
+    addToShoppingBag(product);
+});

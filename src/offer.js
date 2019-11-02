@@ -82,7 +82,6 @@ function countPrice(){
     document.getElementById('newPrice').innerHTML=`£${(price-window.bestOffer.discount)}`;
 }
 function clickAddToBag(e){
-    e.preventDefault();
     let products=document.querySelectorAll('[data-active="true"]');
     let product1={id:products[0].getAttribute('data-id')};
     let product2={id:products[1].getAttribute('data-id')};

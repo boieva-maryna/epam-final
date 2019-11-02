@@ -85,7 +85,6 @@ function countPrice() {
 }
 
 function clickAddToBag(e) {
-  e.preventDefault();
   var products = document.querySelectorAll('[data-active="true"]');
   var product1 = {
     id: products[0].getAttribute('data-id')
