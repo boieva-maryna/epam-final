@@ -36,13 +36,7 @@ function deleteFromShoppingBag(product){
 function getBagSum(shoppingBag){
     let count=0;
     for(let i=0;i<shoppingBag.length;i++){
-        for(let j=0;j<window.catalog.length;j++){
-            if(shoppingBag[i].id===window.catalog[j].id) {
-                count+=(window.catalog[j].discountedPrice!==null ?
-                    window.catalog[j].discountedPrice*shoppingBag[i].quantity:
-                    window.catalog[j].price*shoppingBag[i].quantity);
-            }
-        }
+        count+=Number.parseFloat(shoppingBag[i].price*shoppingBag[i].quantity);
     }
     return count;
 }
@@ -76,7 +70,6 @@ function checkDiscount(shoppingBag){
             if(right!=-1) break;
         }
         if(left!==-1&&right!==-1) {
-            localStorage.setItem('shopping-bag-discount',window.bestOffer.discount);
             return window.bestOffer.discount;
         }
     return 0;

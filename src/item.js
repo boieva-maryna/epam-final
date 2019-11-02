@@ -47,11 +47,15 @@ function chooseSizeOrColor(e){
 }
 document.getElementById('addToBag').addEventListener("click",function(e){
     let details=document.querySelectorAll('[data-checked="true"]');
+    let thumbnail=document.querySelector('[data-active="true"]').querySelector('img').getAttribute('src');
     let product={};
     for(let i=0;i<details.length;i++){
         let detail=details[i].getAttribute('data-product_details');
         product[detail.split(':')[0]]=detail.split(":")[1];
     }
     product.id=currentItem;
+    product.price=document.querySelector('.product-details__price').innerHTML.split("£")[1];
+    product.thumbnail=thumbnail;
+    product.title=document.querySelector('.product-details__title').innerHTML;
     addToShoppingBag(product);
 });

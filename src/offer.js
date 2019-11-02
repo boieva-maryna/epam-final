@@ -83,18 +83,30 @@ function countPrice(){
 }
 function clickAddToBag(e){
     let products=document.querySelectorAll('[data-active="true"]');
-    let product1={id:products[0].getAttribute('data-id')};
-    let product2={id:products[1].getAttribute('data-id')};
+    let product1={
+        id:products[0].getAttribute('data-id'),
+        price:products[0].getAttribute('data-price'),
+        thumbnail:products[0].querySelector('img').getAttribute('src'),
+        title:products[0].querySelector('.product__title').innerHTML
+    };
+    let product2={
+        id:products[1].getAttribute('data-id'),
+        price:products[1].getAttribute('data-price'),
+        thumbnail:products[1].querySelector('img').getAttribute('src'),
+        title:products[1].querySelector('.product__title').innerHTML   
+    };
     for(let i=0;i<left.length;i++){
         if(left[i].id===product1.id){
             product1.size=left[i].sizes[0];
             product1.color=left[i].colors[0];
+            break;
         }
     }
     for(let i=0;i<right.length;i++){
         if(right[i].id===product2.id){
             product2.size=right[i].sizes[0];
             product2.color=right[i].colors[0];
+            break;
         }
     }
     addToShoppingBag(product1);

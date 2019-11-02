@@ -45,11 +45,7 @@ function getBagSum(shoppingBag) {
   var count = 0;
 
   for (var i = 0; i < shoppingBag.length; i++) {
-    for (var j = 0; j < window.catalog.length; j++) {
-      if (shoppingBag[i].id === window.catalog[j].id) {
-        count += window.catalog[j].discountedPrice !== null ? window.catalog[j].discountedPrice * shoppingBag[i].quantity : window.catalog[j].price * shoppingBag[i].quantity;
-      }
-    }
+    count += Number.parseFloat(shoppingBag[i].price * shoppingBag[i].quantity);
   }
 
   return count;
@@ -68,7 +64,6 @@ function getBagQuantity(shoppingBag) {
 function updateBagView(shoppingBag) {
   if (shoppingBag != null) {
     var discount = checkDiscount(shoppingBag);
-    console.log(discount);
     document.getElementById('bagSum').innerHTML = getBagSum(shoppingBag) - discount;
     document.getElementById('bagNumber').innerHTML = getBagQuantity(shoppingBag);
   } else {
@@ -97,7 +92,6 @@ function checkDiscount(shoppingBag) {
   }
 
   if (left !== -1 && right !== -1) {
-    localStorage.setItem('shopping-bag-discount', window.bestOffer.discount);
     return window.bestOffer.discount;
   }
 

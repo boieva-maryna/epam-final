@@ -45,6 +45,7 @@ function chooseSizeOrColor(e) {
 
 document.getElementById('addToBag').addEventListener("click", function (e) {
   var details = document.querySelectorAll('[data-checked="true"]');
+  var thumbnail = document.querySelector('[data-active="true"]').querySelector('img').getAttribute('src');
   var product = {};
 
   for (var _i = 0; _i < details.length; _i++) {
@@ -54,5 +55,8 @@ document.getElementById('addToBag').addEventListener("click", function (e) {
   }
 
   product.id = currentItem;
+  product.price = document.querySelector('.product-details__price').innerHTML.split("£")[1];
+  product.thumbnail = thumbnail;
+  product.title = document.querySelector('.product-details__title').innerHTML;
   addToShoppingBag(product);
 });

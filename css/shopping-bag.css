@@ -85,6 +85,9 @@
     .bag-discount .wrp{
         flex-direction: column-reverse;
     }
+    .bag-products__wrp{
+        flex-wrap: wrap;
+    }
 }
 @media(min-width:768px) and (max-width:1023px){
     .main__header .heading{
