@@ -33,11 +33,12 @@ function deleteFromShoppingBag(product) {
     if (shoppingBag[i].id === product.id && shoppingBag[i].size === product.size && shoppingBag[i].color === product.color) {
       shoppingBag[i].quantity -= 1;
       if (shoppingBag[i].quantity === 0) shoppingBag.splice(i, 1);
-      updateBagView(shoppingBag);
-      localStorage.setItem('shopping-bag', JSON.stringify(shoppingBag));
-      return;
+      break;
     }
   }
+
+  updateBagView(shoppingBag);
+  localStorage.setItem('shopping-bag', JSON.stringify(shoppingBag));
 }
 
 function getBagSum(shoppingBag) {
@@ -66,10 +67,39 @@ function getBagQuantity(shoppingBag) {
 
 function updateBagView(shoppingBag) {
   if (shoppingBag != null) {
-    document.getElementById('bagSum').innerHTML = getBagSum(shoppingBag);
+    var discount = checkDiscount(shoppingBag);
+    console.log(discount);
+    document.getElementById('bagSum').innerHTML = getBagSum(shoppingBag) - discount;
     document.getElementById('bagNumber').innerHTML = getBagQuantity(shoppingBag);
   } else {
     document.getElementById('bagSum').innerHTML = 0;
     document.getElementById('bagNumber').innerHTML = 0;
   }
+}
+
+function checkDiscount(shoppingBag) {
+  //в корзине должен быть товар из bestOffer.left и bestOffer.right
+  var left,
+      right = 0;
+
+  for (var i = 0; i < window.bestOffer.left.length; i++) {
+    left = shoppingBag.map(function (val) {
+      return val.id;
+    }).indexOf(window.bestOffer.left[i]);
+    if (left != -1) break;
+  }
+
+  for (var _i = 0; _i < window.bestOffer.right.length; _i++) {
+    right = shoppingBag.map(function (val) {
+      return val.id;
+    }).indexOf(window.bestOffer.right[_i]);
+    if (right != -1) break;
+  }
+
+  if (left !== -1 && right !== -1) {
+    localStorage.setItem('shopping-bag-discount', window.bestOffer.discount);
+    return window.bestOffer.discount;
+  }
+
+  return 0;
 }
