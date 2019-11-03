@@ -66,11 +66,22 @@ function getBagQuantity(shoppingBag) {
 function updateBagView(shoppingBag) {
   if (shoppingBag != null) {
     var discount = checkDiscount(shoppingBag);
-    document.getElementById('bagSum').innerHTML = getBagSum(shoppingBag) - discount;
+    var sum = getBagSum(shoppingBag) - discount;
+    document.getElementById('bagSum').innerHTML = "£" + sum;
     document.getElementById('bagNumber').innerHTML = getBagQuantity(shoppingBag);
+
+    if (document.getElementById('total')) {
+      document.getElementById('discount').innerHTML = discount > 0 ? "Applied discount :£" + discount : "";
+      document.getElementById('total').innerHTML = "£" + sum;
+    }
   } else {
     document.getElementById('bagSum').innerHTML = 0;
     document.getElementById('bagNumber').innerHTML = 0;
+
+    if (document.getElementById('total')) {
+      document.getElementById('discount').innerHTML = "";
+      document.getElementById('total').innerHTML = "£" + 0;
+    }
   }
 }
 
@@ -98,4 +109,11 @@ function checkDiscount(shoppingBag) {
   }
 
   return 0;
+}
+
+function emptyBag() {
+  shoppingBag = null;
+  localStorage.removeItem('shopping-bag');
+  console.log(shoppingBag);
+  updateBagView(shoppingBag);
 }

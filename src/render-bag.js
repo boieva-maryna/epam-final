@@ -1,6 +1,6 @@
 let container=document.getElementById('bagProducts');
 function renderBag(){
-    if(shoppingBag!==null) {
+    if(shoppingBag!==null&&shoppingBag.length!==0) {
         return `${shoppingBag.map(el=>
         `<article class="product product--bag" data-new=${el.hasNew} data-id=${el.id}>
             <a href="item.html">
@@ -43,6 +43,7 @@ container.addEventListener('click',e=>{
         deleteFromShoppingBag(product,Number(product.quantity));
         parent.parentNode.removeChild(parent);
     }
+    if(container.children.length<1) container.innerHTML=renderBag();
 });
 function getProductAttributes(elem){
     return {
@@ -55,3 +56,13 @@ function getProductAttributes(elem){
         thumbnail:elem.querySelector('.product__img').firstElementChild.getAttribute('src')
     }
 }
+document.getElementById('emptyBag').addEventListener('click',(e)=>{
+    e.preventDefault();
+    emptyBag();
+    container.innerHTML=renderBag();
+});
+document.getElementById('checkout').addEventListener('click',(e)=>{
+    e.preventDefault();
+    emptyBag();
+    container.innerHTML="<h2 class='heading'>Thank you for your purchase!</h2>";
+})
