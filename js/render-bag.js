@@ -12,24 +12,26 @@ function renderBag() {
 
 container.innerHTML = renderBag();
 container.addEventListener('click', function (e) {
-  e.preventDefault();
-  var product = {};
+  var product = {},
+      parent;
   var quantityElem = e.target.parentNode.querySelector('.quantity');
 
   if (e.target.classList.contains('plus')) {
-    product = getProductAttributes(e.target.parentNode.parentNode.parentNode);
+    parent = e.target.parentNode.parentNode.parentNode;
+    product = getProductAttributes(parent);
     addToShoppingBag(product);
     quantityElem.innerHTML = Number(quantityElem.innerHTML) + 1;
   } else if (e.target.classList.contains('minus')) {
-    product = getProductAttributes(e.target.parentNode.parentNode.parentNode);
+    parent = e.target.parentNode.parentNode.parentNode;
+    product = getProductAttributes(parent);
     deleteFromShoppingBag(product);
-    if (quantityElem.innerHTML === "1") e.target.parentNode.parentNode.parentNode.remove();
+    if (quantityElem.innerHTML === "1") parent.parentNode.removeChild(parent);
     quantityElem.innerHTML = Number(quantityElem.innerHTML) - 1;
   } else if (e.target.classList.contains('product__remove')) {
-    product = getProductAttributes(e.target.parentNode.parentNode);
-    console.log(product);
+    parent = e.target.parentNode.parentNode;
+    product = getProductAttributes(parent);
     deleteFromShoppingBag(product, Number(product.quantity));
-    e.target.parentNode.parentNode.remove();
+    parent.parentNode.removeChild(parent);
   }
 });
 
