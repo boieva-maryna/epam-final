@@ -45,6 +45,8 @@
 .bag-discount .wrp{
     display: flex;
     display: flexbox;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
     padding-bottom: 100px;
     padding-top: 30px;
 }
@@ -56,6 +58,9 @@
 }
 .product--bag{
     flex-basis: 50%;
+}
+.product--bag >a{
+    display: block;
 }
 @media (max-width:767px){
     .main__header .heading{
@@ -73,7 +78,7 @@
     .product--bag{
         flex-basis: 100%;
     }
-    .product--bag .product__img{
+    .product--bag >a{
         flex-basis: 46%;
     } 
     .product--bag__details{
@@ -103,7 +108,7 @@
     #total{
         font-size: 22px;
     }
-    .product--bag .product__img{
+    .product--bag > a{
         flex-basis: 45%;
     } 
     .product--bag__details{
@@ -123,7 +128,7 @@
     #total{
         font-size: 24px;
     }
-    .product--bag .product__img{
+    .product--bag .product__img a{
         flex-basis: 43.5%;
     } 
     .product--bag__details{
