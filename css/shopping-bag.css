@@ -12,6 +12,10 @@
 .product__remove{
     color: #fc4e52;
 }
+.control,
+.product__remove{
+    cursor: pointer;
+}
 .control{
     border: none;
     background: white;

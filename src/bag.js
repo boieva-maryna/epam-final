@@ -22,10 +22,11 @@ function addToShoppingBag(product){
     localStorage.setItem('shopping-bag',JSON.stringify(shoppingBag));
     updateBagView(shoppingBag);
 }
-function deleteFromShoppingBag(product){
+function deleteFromShoppingBag(product,quantity){
+    if(quantity<0||quantity==undefined) quantity=1;
     for(let i=0;i<shoppingBag.length;i++){
         if(shoppingBag[i].id===product.id&&shoppingBag[i].size===product.size&&shoppingBag[i].color===product.color){
-            shoppingBag[i].quantity-=1;
+            shoppingBag[i].quantity-=quantity;
             if(shoppingBag[i].quantity===0) shoppingBag.splice(i,1);
             break;
         }
@@ -38,7 +39,7 @@ function getBagSum(shoppingBag){
     for(let i=0;i<shoppingBag.length;i++){
         count+=shoppingBag[i].price*shoppingBag[i].quantity;
     }
-    return count;
+    return count.toFixed(2);
 }
 function getBagQuantity(shoppingBag){
     let quantity=0;
