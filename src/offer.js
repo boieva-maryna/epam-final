@@ -38,7 +38,7 @@ function createSlides(arr,parent,num){
         slide.setAttribute('data-id',arr[i].id);
         slide.className="product";
         slide.innerHTML=`<a href="item.html"><figure class="product__img">
-                <img src=${arr[i].thumbnail}>
+                <img src=${arr[i].thumbnail} alt="${arr[i].title}">
             </figure>
             <h4 class="small-heading product__title">${arr[i].title}</h4>
             <h5 class="price product__price">£${arr[i].price}</h5></a>`;

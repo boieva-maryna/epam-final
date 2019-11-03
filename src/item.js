@@ -5,7 +5,7 @@ if(currentItem===null){
 let item=window.catalog.filter((el)=>el.id==currentItem)[0];
     document.getElementById('preview').innerHTML=`<img src="${item.preview[0]}">`;
     for(let i=0;i<document.querySelectorAll('.thumbnail__img').length;i++){
-        document.querySelectorAll('.thumbnail__img')[i].innerHTML=`<img src="${item.preview[i]}">`;
+        document.querySelectorAll('.thumbnail__img')[i].innerHTML=`<img src="${item.preview[i]}" alt="${item.title}">`;
     };
     document.getElementById('productsDetails').innerHTML=`
     <h2 class="small-heading product-details__title">${item.title}</h2>

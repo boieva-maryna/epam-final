@@ -42,7 +42,7 @@ function createSlides(arr, parent, num) {
     slide.setAttribute('data-new', arr[i].hasNew);
     slide.setAttribute('data-id', arr[i].id);
     slide.className = "product";
-    slide.innerHTML = "<a href=\"item.html\"><figure class=\"product__img\">\n                <img src=".concat(arr[i].thumbnail, ">\n            </figure>\n            <h4 class=\"small-heading product__title\">").concat(arr[i].title, "</h4>\n            <h5 class=\"price product__price\">\xA3").concat(arr[i].price, "</h5></a>");
+    slide.innerHTML = "<a href=\"item.html\"><figure class=\"product__img\">\n                <img src=".concat(arr[i].thumbnail, " alt=\"").concat(arr[i].title, "\">\n            </figure>\n            <h4 class=\"small-heading product__title\">").concat(arr[i].title, "</h4>\n            <h5 class=\"price product__price\">\xA3").concat(arr[i].price, "</h5></a>");
     if (i != 0) slide.style.display = "none";else slide.setAttribute('data-active', true);
     parent.appendChild(slide);
   }

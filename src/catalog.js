@@ -17,7 +17,7 @@ function renderProducts(){
         `<article class="product" data-new=${el.hasNew} data-id=${el.id}>
             <a href="item.html">
                 <figure class="product__img">
-                    <img src=${el.thumbnail}>
+                    <img src=${el.thumbnail} alt="${el.title}">
                 </figure>
                 <h4 class="small-heading product__title">${el.title}</h4>
                 ${el.discountedPrice!==null&&el.discountedPrice<el.price ? `<h5 class="price product__price">

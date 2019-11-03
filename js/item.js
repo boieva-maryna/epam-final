@@ -12,7 +12,7 @@ var item = window.catalog.filter(function (el) {
 document.getElementById('preview').innerHTML = "<img src=\"".concat(item.preview[0], "\">");
 
 for (var i = 0; i < document.querySelectorAll('.thumbnail__img').length; i++) {
-  document.querySelectorAll('.thumbnail__img')[i].innerHTML = "<img src=\"".concat(item.preview[i], "\">");
+  document.querySelectorAll('.thumbnail__img')[i].innerHTML = "<img src=\"".concat(item.preview[i], "\" alt=\"").concat(item.title, "\">");
 }
 
 ;
