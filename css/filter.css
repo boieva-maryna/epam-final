@@ -173,6 +173,9 @@
         -ms-grid-column: 4;
         -ms-grid-column-span: 3;
     }
+    .filter__category--6 .filter__checked::after{
+        content: none;
+    }
 }
 @media (max-width:600px){
     .filter__category--5,.filter__category--6{
