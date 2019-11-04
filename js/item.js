@@ -16,7 +16,7 @@ for (var i = 0; i < document.querySelectorAll('.thumbnail__img').length; i++) {
 }
 
 ;
-document.getElementById('productsDetails').innerHTML = "\n    <h2 class=\"small-heading product-details__title\">".concat(item.title, "</h2>\n    <p class=\"cursive product-details__description\">").concat(item.description, "</p>\n    <p class=\"product-details__price price\">\xA3").concat(item.price, "</p>\n    ").concat(item.sizes.length > 0 ? "<div class=\"product-details__buttons product-details__buttons--size\">\n        <span class=\"product-details__option\">Size</span>\n        ".concat(item.sizes.map(function (size, index) {
+document.getElementById('productsDetails').innerHTML = "\n    <h2 class=\"small-heading product-details__title\">".concat(item.title, "</h2>\n    <p class=\"cursive product-details__description\">").concat(item.description, "</p>\n    <p class=\"product-details__price price\">\xA3").concat(item.discountedPrice !== null && item.discountedPrice < item.price ? "<span class=\"price--crossed\">".concat(item.price, "</span>\xA3").concat(item.discountedPrice) : item.price, "</p>\n    ").concat(item.sizes.length > 0 ? "<div class=\"product-details__buttons product-details__buttons--size\">\n        <span class=\"product-details__option\">Size</span>\n        ".concat(item.sizes.map(function (size, index) {
   if (index === 0) return "<a href=\"#\" class=\"button\" data-product_details=\"size:".concat(size, "\" data-checked=\"true\">").concat(size, "</a>");else return "<a href=\"#\" class=\"button\" data-product_details=\"size:".concat(size, "\">").concat(size, "</a>");
 }).join(""), "\n    </div>") : "", "\n    ").concat(item.colors.length > 0 ? "<div class=\"product-details__buttons product-details__buttons--color\">\n        <span class=\"product-details__option\">Color</span>\n        ".concat(item.colors.map(function (color, index) {
   if (index === 0) return "<a href=\"#\" class=\"button\" data-product_details=\"color:".concat(color, "\" data-checked=\"true\">").concat(color, "</a>");else return "<a href=\"#\" class=\"button\" data-product_details=\"color:".concat(color, "\">").concat(color, "</a>");
@@ -54,7 +54,7 @@ document.getElementById('addToBag').addEventListener("click", function (e) {
   }
 
   product.id = currentItem;
-  product.price = item.price;
+  product.price = item.discountedPrice !== null ? item.discountedPrice : item.price;
   product.thumbnail = item.thumbnail;
   product.title = item.title;
   addToShoppingBag(product);

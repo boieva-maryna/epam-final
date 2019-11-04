@@ -49,6 +49,7 @@
     color: #757575;
     position: relative;
     margin: 0;
+    display: block;
 }
 #newPrice{
     margin: 5% 0;

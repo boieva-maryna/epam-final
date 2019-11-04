@@ -1,9 +1,6 @@
 .main{
     flex-grow: 0;
 }
-.price--crossed{
-    display: inline-block;
-}
 .products__wrp{
     display:flex;
     display: flexbox;
@@ -96,8 +93,14 @@
     .promo__article:nth-child(2) header{
         top:50%;
     }
-    .promo__article:nth-child(3){
+    .promo .promo__article:nth-child(3){
         display: none;
+    }
+    .promo .promo__article:first-child{
+        flex-basis: 60%;
+    }
+    .promo .promo__article:nth-child(2){
+        flex-basis: 40%;
     }
     .products__wrp{
         padding-top: 40px;
@@ -121,6 +124,15 @@
     }
     .product:nth-of-type(n+6){
         order: 1;
+    }
+    .promo .promo__article:nth-child(3){
+        flex-basis: 25%;
+    }
+    .promo .promo__article:first-child{
+        flex-basis: 50%;
+    }
+    .promo .promo__article:nth-child(2){
+        flex-basis: 25%;
     }
 }
 @media (min-width:1300px){

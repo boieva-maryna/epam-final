@@ -57,12 +57,16 @@ function getProductAttributes(elem){
     }
 }
 document.getElementById('emptyBag').addEventListener('click',(e)=>{
-    e.preventDefault();
-    emptyBag();
-    container.innerHTML=renderBag();
+    if(shoppingBag){
+        e.preventDefault();
+        emptyBag();
+        container.innerHTML=renderBag();
+    }
 });
 document.getElementById('checkout').addEventListener('click',(e)=>{
-    e.preventDefault();
-    emptyBag();
-    container.innerHTML="<h2 class='heading'>Thank you for your purchase!</h2>";
+    if(shoppingBag) {
+        e.preventDefault();
+        emptyBag();
+        container.innerHTML="<h2 class='heading'>Thank you for your purchase!</h2>";
+    }
 })

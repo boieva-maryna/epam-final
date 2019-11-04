@@ -32,7 +32,7 @@ sliders[1].addEventListener('click',function(e){
 function createSlides(arr,parent,num){
     for(var i=0;i<arr.length;i++){
         var slide=document.createElement('article');
-        slide.setAttribute('data-price',arr[i].price);
+        slide.setAttribute('data-price',arr[i].discountedPrice!==null? arr[i].discountedPrice :arr[i].price);
         slide.setAttribute('data-slider',num);
         slide.setAttribute('data-new',arr[i].hasNew);
         slide.setAttribute('data-id',arr[i].id);
@@ -41,7 +41,9 @@ function createSlides(arr,parent,num){
                 <img src=${arr[i].thumbnail} alt="${arr[i].title}">
             </figure>
             <h4 class="small-heading product__title">${arr[i].title}</h4>
-            <h5 class="price product__price">£${arr[i].price}</h5></a>`;
+            ${arr[i].discountedPrice!==null&&arr[i].discountedPrice<arr[i].price ? `<h5 class="price product__price">
+            <span class="price--crossed">£${arr[i].price}</span> £${arr[i].discountedPrice}</h5>` : 
+            `<h5 class="price product__price">£${arr[i].price}</h5>`}</a>`;
         if(i!=0) slide.style.display="none"; 
         else slide.setAttribute('data-active',true);
         parent.appendChild(slide);

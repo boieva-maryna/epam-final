@@ -138,6 +138,12 @@
     .promo__article:nth-child(3){
         display: none;
     }
+    .promo__article:first-child{
+        flex-basis: 60%;
+    }
+    .promo__article:nth-child(2){
+        flex-basis: 40%;
+    }
     .product-details__wrp{
         padding-top: 30px;
     }
@@ -200,6 +206,15 @@
     .product-details__description-container{
         height: 50%;
         padding-left: 50px;
+    }
+    .promo .promo__article:nth-child(3){
+        flex-basis: 25%;
+    }
+    .promo .promo__article:first-child{
+        flex-basis: 50%;
+    }
+    .promo .promo__article:nth-child(2){
+        flex-basis: 25%;
     }
 }
 @media (min-width:1300px){

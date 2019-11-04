@@ -37,12 +37,12 @@ sliders[1].addEventListener('click', function (e) {
 function createSlides(arr, parent, num) {
   for (var i = 0; i < arr.length; i++) {
     var slide = document.createElement('article');
-    slide.setAttribute('data-price', arr[i].price);
+    slide.setAttribute('data-price', arr[i].discountedPrice !== null ? arr[i].discountedPrice : arr[i].price);
     slide.setAttribute('data-slider', num);
     slide.setAttribute('data-new', arr[i].hasNew);
     slide.setAttribute('data-id', arr[i].id);
     slide.className = "product";
-    slide.innerHTML = "<a href=\"item.html\"><figure class=\"product__img\">\n                <img src=".concat(arr[i].thumbnail, " alt=\"").concat(arr[i].title, "\">\n            </figure>\n            <h4 class=\"small-heading product__title\">").concat(arr[i].title, "</h4>\n            <h5 class=\"price product__price\">\xA3").concat(arr[i].price, "</h5></a>");
+    slide.innerHTML = "<a href=\"item.html\"><figure class=\"product__img\">\n                <img src=".concat(arr[i].thumbnail, " alt=\"").concat(arr[i].title, "\">\n            </figure>\n            <h4 class=\"small-heading product__title\">").concat(arr[i].title, "</h4>\n            ").concat(arr[i].discountedPrice !== null && arr[i].discountedPrice < arr[i].price ? "<h5 class=\"price product__price\">\n            <span class=\"price--crossed\">\xA3".concat(arr[i].price, "</span> \xA3").concat(arr[i].discountedPrice, "</h5>") : "<h5 class=\"price product__price\">\xA3".concat(arr[i].price, "</h5>"), "</a>");
     if (i != 0) slide.style.display = "none";else slide.setAttribute('data-active', true);
     parent.appendChild(slide);
   }

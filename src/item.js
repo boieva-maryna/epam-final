@@ -10,7 +10,7 @@ let item=window.catalog.filter((el)=>el.id==currentItem)[0];
     document.getElementById('productsDetails').innerHTML=`
     <h2 class="small-heading product-details__title">${item.title}</h2>
     <p class="cursive product-details__description">${item.description}</p>
-    <p class="product-details__price price">£${item.price}</p>
+    <p class="product-details__price price">£${item.discountedPrice!==null&&item.discountedPrice<item.price?`<span class="price--crossed">${item.price}</span>£${item.discountedPrice}`:item.price}</p>
     ${item.sizes.length>0 ? `<div class="product-details__buttons product-details__buttons--size">
         <span class="product-details__option">Size</span>
         ${item.sizes.map((size,index)=>{
@@ -53,7 +53,7 @@ document.getElementById('addToBag').addEventListener("click",function(e){
         product[detail.split(':')[0]]=detail.split(":")[1];
     }
     product.id=currentItem;
-    product.price=item.price;
+    product.price=item.discountedPrice!==null? item.discountedPrice :item.price;
     product.thumbnail=item.thumbnail;
     product.title=item.title;
     addToShoppingBag(product);

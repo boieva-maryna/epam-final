@@ -133,6 +133,7 @@ a[data-active_filter='true']{
 .promo__images{
     display: flex;
     display: flexbox;
+    display: -ms-flexbox;
 }
 .promo__images img{
     display: block;
@@ -269,5 +270,8 @@ a[data-active_filter='true']{
     background-color: #fc4e52;
     transform: rotate(-25deg) translateY(-0.7em);
     margin: 0 auto;
+}
+.price--crossed{
+    display: inline-block;
 }
 
