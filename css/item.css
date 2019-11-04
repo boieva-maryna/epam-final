@@ -167,9 +167,11 @@
     }
     .thumbnail:nth-of-type(3){
         -ms-grid-row: 2;
+        grid-row: 2;
     }
     .thumbnail:nth-of-type(4){
         -ms-grid-row: 3;
+        grid-row: 3;
     }
 }
 @media (min-width:1024px){
