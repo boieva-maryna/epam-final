@@ -8,8 +8,8 @@ window.catalog = [{
     hasNew: false,
     category: 'women',
     fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    colors: ['Dark blue'],
+    sizes: ['UK 18'],
     thumbnail: 'img/Monki_Festval_Knitted.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/preview.jpg', 'img/preview.jpg', 'img/preview.jpg'] // replace with paths to images extracted from item layout
 }, {
@@ -78,8 +78,8 @@ window.catalog = [{
     hasNew: false,
     category: 'women',
     fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    colors: ['Flower print'],
+    sizes: ['UK 22'],
     thumbnail: 'img/With_Patchwork_Crochet.jpg', // replace with image extracted from item layout
     preview: ['img/preview.jpg', 'img/preview.jpg', 'img/preview.jpg'] // replace with paths to images extracted from item layout
 }, {
