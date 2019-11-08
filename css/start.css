@@ -19,6 +19,9 @@
     flex-basis: 50%;
     flex-grow: 2;
 }
+.promo__article a{
+    display: block;
+}
 .promo__article header{
     width: 50%;
     right: 0;

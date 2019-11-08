@@ -459,6 +459,9 @@
         font-size: 12px;
         font-family: 'Roboto',sans-serif;
     }
+    .filter__option label{
+        display: block;
+    }
 }
 @media(min-width:1180px){
     .filter__wrp{

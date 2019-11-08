@@ -88,6 +88,7 @@
     -ms-flex-pack: center;
     align-items: baseline;
     -ms-flex-align: baseline;
+    padding: 5px 0;
 }
 .product-details__description,
 .product-details__buttons,
@@ -105,6 +106,9 @@
 .product-details__description{
     text-align: center;
     width: 100%;
+}
+.product-details__buttons>*{
+    margin: 0 10px;
 }
 @media (max-width:767px){
     .promo__article h3{
